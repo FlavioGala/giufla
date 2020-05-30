@@ -24,7 +24,7 @@ module ROM #(parameter integer WIDTH = 64, parameter integer DEPTH = 64) (
    // initial
    initial begin
    
-      $readmemh("../bench/cosineNumber.txt", mem) ; 
+      $readmemh("../../rtl/numberROM.txt", mem) ; 
       
 	  
 	  
