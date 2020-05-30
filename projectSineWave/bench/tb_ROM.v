@@ -8,21 +8,21 @@ module tb_ROM ;
 
 
    /////////////////////////////////
-   //   100 MHz clock generator   //
+   //   1 MHz clock generator   //
    /////////////////////////////////
 
-   wire clk100 ;
+   wire clk1 ;
 
-   ClockGen   ClockGen_inst (.clk(clk100)) ;
+   ClockGen   ClockGen_inst (.clk(clk1)) ;
 
 
    /////////////////////////////////////////////////
    //    10 MHz read-enable generator as "tick"   //
    /////////////////////////////////////////////////
 
-   wire rd_enable ;
+   wire rd_enable = 1'b1 ;
 
-   TickCounter  #(.MAX(10)) TickCounter_inst ( .clk(clk100), .tick(rd_enable)) ;
+   //TickCounter  #(.MAX(10)) TickCounter_inst ( .clk(clk1), .tick(rd_enable)) ;
 
 
    ///////////////////////////
@@ -32,7 +32,7 @@ module tb_ROM ;
 
    reg [5:0] count = 5'd0 ;     // 6-bit counter to cover addresses 0 to 63 
 
-   always @(posedge clk100)
+   always @(posedge clk1)
       if(rd_enable)
          count <= #10 count + 1'b1 ;      // add 10 ns delay only for better visualization and easier debug, everything works also without it
 
@@ -44,7 +44,7 @@ module tb_ROM ;
 
    wire [63:0] rom_word ;
 
-   ROM   DUT ( .clk(clk100), .address(count[5:0]), .en(rd_enable), .data(rom_word)) ;
+   ROM   DUT ( .clk(clk1), .address(count[5:0]), .en(rd_enable), .data(rom_word)) ;
 
 
    //////////////////
@@ -53,12 +53,12 @@ module tb_ROM ;
 
    initial begin
 
-      #(2*64*100) $finish ;
+      #(2*64*1000) $finish ;
    end
 
 
    // monitor the ROM content in the simulator console
-   always @(posedge rd_enable)
+   always @(posedge clk1)
       $display("%c", rom_word[63:0]) ;
 
 endmodule
