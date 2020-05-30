@@ -8,9 +8,9 @@
 
 
 
-f = open("numberROM.hex", "w")
+#f = open("numberROM.hex", "w")
 
-k = 0
+#k = 0
 
 print("// Verilog code starts here")
 print("initial begin")
@@ -22,7 +22,7 @@ print("initial begin")
 #	print("   mem[%2d] = 8'h%s ;" % (k,hexCode))
 
 
-hexnumber = float.hex( 10.85 )
+hexnumber = float.hex( 2.6)[2:]
 
 print(" first number = 16'h%s ;" % (hexnumber))
 
