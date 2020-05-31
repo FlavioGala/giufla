@@ -1,7 +1,0 @@
-1) generare dati per il seno un po a caso
-1.1) usare le loock up tables per metterli piu a posto
-2) importarli e salvarli nella ram
-3) creare il pulse width modulation con i dati della ram
-4) cercare di visualizzare il seno
-5)utilizzare il delay dell'fpga per sfasare il seno
-6) fare una somma di due seni?
