@@ -13,11 +13,11 @@ from ROOT import TH1F, gStyle, gPad ;
 gStyle.SetOptStat(0)
 
 
-## histogram the "trend" of shift-register outputs (not a true histogram indeed, just a trend)
-histoBytes = TH1F("histo", "LFSR output-code distribution", 256*4, -0.5, 256*4 + 0.5)   ## extra values simply goes into overflow bin
+## histogram the "trend" of the sine wave
+histoBytes = TH1F("histo", "LFSR output-code distribution", 1000*4, -1100, 1000*4 + 0.5)   ## extra values simply goes into overflow bin
 
 ## open the ASCII file containing shift-register output bytes
-file = open("bytes.txt","r")
+file = open("numberROM.txt","r")
 
 
 ## **NOTE: in a ROOT histogram bin zero contains underflows, bin N+1 overflows
@@ -33,12 +33,12 @@ for line in file :
 histoBytes.Draw()
 
 ## the "random" sequence repeats after 256 values, show only 4 repeated sequences
-histoBytes.GetXaxis().SetRangeUser(0, 256*4)
+histoBytes.GetXaxis().SetRangeUser(0, 1000*4)
 
 
 ## cosmetics
-histoBytes.GetXaxis().SetTitle("tick")
-histoBytes.GetYaxis().SetTitle("LFSR[7:0] integer value")
+histoBytes.GetXaxis().SetTitle("t")
+histoBytes.GetYaxis().SetTitle("1000*sen(x/1000)")
 histoBytes.GetYaxis().CenterTitle()
 
 gPad.SetGridx()
