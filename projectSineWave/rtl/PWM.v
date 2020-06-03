@@ -4,7 +4,7 @@
 module PWM (
 
    input  wire  clk,
-   input  wire  [63:0] width,
+   input  wire  [31:0] width,
    output wire  pwm
 
    ) ;
@@ -18,6 +18,6 @@ module PWM (
    end
    
    // assert PWM signal
-   assign pwm = ( count[7:0] < width[7:0] ) ? 1'b1 : 1'b0 ;  // binary comparator
+   assign pwm = ( count[7:0] < width[31:0] ) ? 1'b1 : 1'b0 ;  // binary comparator
    
 endmodule

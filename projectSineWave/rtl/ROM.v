@@ -1,7 +1,7 @@
 
 `timescale 1ns / 100ps
 
-module ROM #(parameter integer WIDTH = 64, parameter integer DEPTH = 64) (
+module ROM #(parameter integer WIDTH = 32, parameter integer DEPTH = 64) (
 
    input  wire clk,
    input  wire en,
@@ -24,7 +24,7 @@ module ROM #(parameter integer WIDTH = 64, parameter integer DEPTH = 64) (
    // initial
    initial begin
    
-      $readmemh("../../rtl/numberROM.txt", mem) ; 
+      $readmemh("../../rtl/numberROM.hex", mem) ; 
       
 	  
 	  

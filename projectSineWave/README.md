@@ -21,3 +21,8 @@
 4) cercare di visualizzare il seno
 5)utilizzare il delay dell'fpga per sfasare il seno
 6) fare una somma di due seni?
+
+
+# third day ideas
+
+istanziare un contatore per leggere i dati
