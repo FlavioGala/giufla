@@ -24,7 +24,7 @@ module ROM #(parameter integer WIDTH = 32, parameter integer DEPTH = 64) (
    // initial
    initial begin
    
-      $readmemh("..\..\rtl\NumberROM.hex", mem) ; 
+      $readmemh("../../rtl/numberROM.hex", mem) ; 
       
 	  
 	  
