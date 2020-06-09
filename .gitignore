@@ -1,0 +1,9 @@
+## .gitignore file for finale project
+
+
+## exclude garbage file from versioning
+
+projectSineWave/*.log
+projectSineWave/*.jou
+projectSineWave/logs/*
+projectSineWave/work/*
