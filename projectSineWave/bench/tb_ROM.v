@@ -42,7 +42,7 @@ module tb_ROM ;
    //   device under test   //
    ///////////////////////////
 
-   wire [63:0] rom_word ;
+   wire [31:0] rom_word ;
 
    ROM   DUT ( .clk(clk100), .address(count[5:0]), .en(rd_enable), .data(rom_word)) ;
 
@@ -59,7 +59,7 @@ module tb_ROM ;
 
    // monitor the ROM content in the simulator console
    always @(posedge clk100)
-      $display("%c", rom_word[63:0]) ;
+      $display("%c", rom_word[31:0]) ;
 
 endmodule
 
