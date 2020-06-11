@@ -26,3 +26,31 @@
 # third day ideas
 
 istanziare un contatore per leggere i dati
+
+
+# consigli di pacher
+
+1) altro modo di generare il seno: con la DAC (implementare una dac e convertire il segnale che esce dalla rom)
+2)lt spice per circuito RC e OP AMP ($fwrite $fmonitor $fdisplay)
+3)ROM con IP block
+4) confronto fra ROM nel blocco di RAM e ROM distribuita nelle lut e nei flip flop e confronto
+
+
+#programma da adesso
+1) risolvere il problema del tick counter
+2) risolvere il problema del file.hex
+3) mandare l'uscita nel circuito R C di LTspice
+4)inserire una PLL
+5) instanziare la ROM come una IP
+
+6)seno creato con la DAC
+7)prendere la FPGA da pacher con OPamp e R C e visualizzare il seno.
+8)pragma con la ROM nelle LUT.
+
+TOTALE 20 ore
+
+
+
+
+
+
