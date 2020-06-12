@@ -20,9 +20,9 @@ module tb_ROM ;
    //    100 KHz read-enable generator as "tick"   //
    /////////////////////////////////////////////////
 
-   wire rd_enable = 1'b1 ;
+   wire rd_enable ;
 
-   TickCounter  #(1000) TickCounter_inst ( .clk(clk100), .tick(rd_enable)) ;
+   TickCounter  #(.MAX(10)) TickCounter_inst ( .clk(clk100), .tick(rd_enable)) ;
 
 
    ///////////////////////////
