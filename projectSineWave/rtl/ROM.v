@@ -28,7 +28,7 @@ module ROM #(parameter integer WIDTH = 32, parameter integer DEPTH = 64) (
       
 	  //$readmemh("../../rtl/numberROM.txt", mem);
 	  
-	  $readmemh("C:\\Users\\giuli\\Desktop\\giufla\\projectSineWave\\rtl\\numberROM.txt", mem);
+	  $readmemh("C:/Users/giuli/Desktop/giufla/projectSineWave/rtl/numberROM.txt", mem);
 	  
 	  
 	  

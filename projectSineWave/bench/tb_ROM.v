@@ -22,7 +22,7 @@ module tb_ROM ;
 
    wire rd_enable ;
 
-   TickCounter  #(.MAX(10)) TickCounter_inst ( .clk(clk100), .tick(rd_enable)) ;
+   TickCounter  #(.MAX(1000)) TickCounter_inst ( .clk(clk100), .tick(rd_enable)) ;
 
 
    ///////////////////////////
@@ -52,7 +52,7 @@ module tb_ROM ;
    //////////////////
 
    initial begin
-
+      
       #(2*64*1000) $finish ;
    end
 
