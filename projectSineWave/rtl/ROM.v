@@ -24,9 +24,15 @@ module ROM #(parameter integer WIDTH = 32, parameter integer DEPTH = 64) (
    // initial
    initial begin
    
+<<<<<<< HEAD
       $readmemh("C:\\Users\\Garripoli\\Desktop\\giufla\\projectSineWave\\rtl\\NumberROM.hex", mem) ; 
+=======
+      //$readmemh("../../rtl/numberROM.hex", mem) ; 
+>>>>>>> 34be4cd16e8945a160df072cb5efc6deb6d39f65
       
+	  //$readmemh("../../rtl/numberROM.txt", mem);
 	  
+	  $readmemh("C:/Users/giuli/Desktop/giufla/projectSineWave/rtl/numberROM.txt", mem);
 	  
 	  
 	  

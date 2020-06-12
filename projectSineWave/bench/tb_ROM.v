@@ -20,9 +20,15 @@ module tb_ROM ;
    //    100 KHz read-enable generator as "tick"   //
    /////////////////////////////////////////////////
 
+<<<<<<< HEAD
    wire rd_enable;
 
    TickCounter  #(10) TickCounter_inst ( .clk(clk100), .tick(rd_enable)) ;
+=======
+   wire rd_enable ;
+
+   TickCounter  #(.MAX(1000)) TickCounter_inst ( .clk(clk100), .tick(rd_enable)) ;
+>>>>>>> 34be4cd16e8945a160df072cb5efc6deb6d39f65
 
 
    ///////////////////////////
@@ -52,8 +58,13 @@ module tb_ROM ;
    //////////////////
 
    initial begin
+<<<<<<< HEAD
 
       #(2*64*10000) $finish ;
+=======
+      
+      #(2*64*1000) $finish ;
+>>>>>>> 34be4cd16e8945a160df072cb5efc6deb6d39f65
    end
 
 

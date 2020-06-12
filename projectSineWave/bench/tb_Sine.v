@@ -38,7 +38,7 @@ module tb_Sine ;
    
    
    
-integer f ;    // the $fopen Verilog task returns a 32-bit integer
+/* integer f ;    // the $fopen Verilog task returns a 32-bit integer
 
    initial begin
 
@@ -52,7 +52,7 @@ integer f ;    // the $fopen Verilog task returns a 32-bit integer
       
 	  $fdisplay(f,"%b", pippo, $time) ;
    
-   end
+   end */
 
 
 endmodule
