@@ -10,16 +10,16 @@
 
 module Sine (
 
-   input  wire clk,
+   input  wire clk_100,
    output wire [31:0] sine
 
    ) ;
    
    //first block
-   WidthSine WidthSine_inst (.clk100(clk)) ;
+   WidthSine WidthSine_inst (.clk(clk_300)) ;
    
    // tick counter
-   TickCounter #(.MAX(1000)) tick ( .clk(clk)) ;
+   TickCounter #(.MAX(1000)) tick ( .clk(clk_300)) ;
    
    
    //32 bit counter
@@ -35,9 +35,27 @@ module Sine (
    
    //binary comparator
    assign sine = ( counter < WidthSine_inst.widthSine ) ? 1'b1 : 1'b0 ;
-   
 
+
+
+   ///////////   
+   //  PLL  //
+   ///////////
    
+   wire clk_300 ;
+   
+   wire locked ;
+   
+     PLL PLL_inst
+   (
+    // Clock out ports
+    .clk_out(clk_300),     // output clk_out1
+    // Status and control signals
+    .locked_signal(locked),       // output locked
+   // Clock in ports
+    .clk_in(clk_100));      // input clk_in1
+
+
 
 
 endmodule

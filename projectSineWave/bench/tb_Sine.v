@@ -10,7 +10,7 @@
 
 module tb_Sine ;
 
-         /////////////////////////////////
+   /////////////////////////////////
    //   100 MHz clock generator   //
    /////////////////////////////////
 
@@ -24,15 +24,18 @@ module tb_Sine ;
    
    wire [31:0] pippo ;
    
-   Sine sine_inst (.clk(clk100), .sine(pippo) ) ;
+   Sine sine_inst (.clk_100(clk100), .sine(pippo) ) ;
    
-      ///////////////////////
+   ///////////////////////
    //    stimulous     //
    //////////////////////
    
    initial begin
    
       #(2*650000) $finish ;
+	  
+	  
+	  
 	  
    end
    

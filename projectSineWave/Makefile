@@ -216,8 +216,8 @@ clean :
 
 	@$(RM) *.log *.jou *.pb *.wdb $(LOG_DIR)/*
 	@$(RMDIR) xsim.dir .Xil
-	##@$(RMDIR) work/sim/*
-	##@$(RMDIR) work/impl/*
+##@$(RMDIR) work/sim/*
+##@$(RMDIR) work/impl/*
 ##_______________________________________________________________________________________
 
 

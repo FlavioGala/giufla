@@ -12,13 +12,13 @@
 
 module WidthSine (
 
-   input  wire clk100,
+   input  wire clk,
    output wire [31:0] widthSine
 
    ) ;
    
    // tick counter
-   TickCounter #(.MAX(1000)) tick ( .clk(clk100)) ;
+   TickCounter #(.MAX(1000)) tick (.clk(clk)) ;
    
    
     //count for address
@@ -29,7 +29,7 @@ module WidthSine (
          addressCounter <= addressCounter + 1'b1 ;   
    
    //ROM
-   ROM  SineData ( .clk(clk100), .address(addressCounter[5:0]), .en(tick.tick), .data(widthSine)) ;
+   ROM  SineData ( .clk(clk), .address(addressCounter[5:0]), .en(tick.tick), .data(widthSine)) ;
    
 
 endmodule
