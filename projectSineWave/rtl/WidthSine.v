@@ -24,7 +24,7 @@ module WidthSine (
     //count for address
    reg [5:0] addressCounter = 5'd0 ;     // 6-bit counter to cover addresses 0 to 63 
 
-   always @(posedge clk100)
+   always @(posedge clk)
       if( tick.tick == 1'b1 )
          addressCounter <= addressCounter + 1'b1 ;   
    

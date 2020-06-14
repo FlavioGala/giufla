@@ -25,7 +25,7 @@ module Sine (
    //32 bit counter
    reg [31:0] counter = 31'd0 ;
    
-   always @(posedge clk)
+   always @(posedge clk_300)
        if ( tick.tick == 1'b1)
 	      counter = 31'd0 ;
 	   else
@@ -49,11 +49,11 @@ module Sine (
      PLL PLL_inst
    (
     // Clock out ports
-    .clk_out(clk_300),     // output clk_out1
+    .clk_out1(clk_300),     // output clk_out1
     // Status and control signals
-    .locked_signal(locked),       // output locked
+    .locked(locked),       // output locked
    // Clock in ports
-    .clk_in(clk_100));      // input clk_in1
+    .clk_in1(clk_100));      // input clk_in1
 
 
 

@@ -28,7 +28,8 @@
 
 module TickCounter #(parameter integer MAX = 1000) (      // 100KHz, T = 10us con FPGA CLK = 100MHz
 
-   input  wire clk,      // assume 100 MHz input clock
+   input  wire clk,     // assume 100 MHz input clock
+   //input  reg en,
    output reg  tick      // single clock-pulse output
 
    ) ;
@@ -52,22 +53,22 @@ module TickCounter #(parameter integer MAX = 1000) (      // 100KHz, T = 10us co
    //
 
    reg [31:0] count = 32'd0  ;      // **IMPORTANT: unused bits are simply DELETED by the synthesizer !
-
+ 
    always @(posedge clk) begin
+      //if (en==1'b1) begin
+         if( count == MAX-1 ) begin
 
-      if( count == MAX-1 ) begin
+            count <= 32'd0 ;           // force the roll-over
+            tick  <= 1'b1 ;            // assert a single-clock pulse each time the counter resets
 
-         count <= 32'd0 ;           // force the roll-over
-         tick  <= 1'b1 ;            // assert a single-clock pulse each time the counter resets
+         end
+         else begin
 
-      end
-      else begin
+            count <= count + 1'b1 ;
+            tick  <= 1'b0 ;
 
-         count <= count + 1'b1 ;
-         tick  <= 1'b0 ;
-
-      end    // if
-   end   // always
-
+         end    // if
+      //end   
+   end
 endmodule
 
