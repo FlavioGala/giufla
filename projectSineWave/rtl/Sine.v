@@ -11,7 +11,7 @@
 module Sine (
 
    input  wire clk_100,
-   output wire [31:0] sine
+   output wire sine
 
    ) ;
    

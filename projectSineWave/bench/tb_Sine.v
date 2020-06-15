@@ -22,7 +22,7 @@ module tb_Sine ;
    //     DUT       //
    ///////////////////
    
-   wire [31:0] pippo ;
+   wire pippo ;
    
    Sine sine_inst (.clk_100(clk100), .sine(pippo) ) ;
    
@@ -30,9 +30,27 @@ module tb_Sine ;
    //    stimulous     //
    //////////////////////
    
-   initial begin
+ 
    
-      #(2*650000) $finish ;
+       /* initial begin
+	   
+	   always @ (posedge clk100) 
+	   
+      $display("\t\t   time   ") ;
+      $monitor("%d ns   ",$time) ;
+	  $stop;
+	  
+   end */
+
+
+   // dump waveforms into industry-standard Value Change Dump (VCD) database
+   initial begin
+      $dumpfile ("waveforms.vcd") ;
+      $dumpvars ;
+   end
+     
+	 initial begin
+      #(660000) $finish ;
 	  
 	  
 	  

@@ -32,9 +32,11 @@ module WidthSine (
       if( tick == 1'b1 )
          addressCounter <= addressCounter + 1'b1 ;   
    
-   //ROM
-   ROM  SineData ( .clk(clk), .address(addressCounter[5:0]), .en(tick), .data(widthSine)) ;
+   //ROM istanziata da noi
+   //ROM  SineData ( .clk(clk), .address(addressCounter[5:0]), .en(tick), .data(widthSine)) ;
    
+   //IP ROM
+   Storage Storage_inst ( .clk(clk), .addr(addressCounter[5:0]), .en(tick), .d_out(widthSine)) ;
 
 endmodule
 
