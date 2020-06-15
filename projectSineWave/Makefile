@@ -1,8 +1,8 @@
 #
-# Sample Makefile to test tools installation and setup.
+# Makefile to simplify the flow.
 #
-# Luca Pacher - pacher@to.infn.it
-# May 8, 2020
+# Giulia e Flavio
+# june 14, 2020
 #
 
 #######################################
@@ -245,5 +245,13 @@ help :
 	@$(ECHO) " - make upload      Upload bitsream to target FPGA using Hardware Manager"
 	@$(ECHO) " - make flash       Program external Quad Flash memory" 
 	@$(ECHO) " - make clean       Delete all log files and temporary files\n"
+	@$(ECHO) " - make charles     CHARLES
 ##_______________________________________________________________________________________
+
+## charles
+.PHONY : charles
+charles :
+
+	@$(ECHO) "\n\n\n    CHARLES\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+##________________________________________________________________________________________
 

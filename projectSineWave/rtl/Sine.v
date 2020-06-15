@@ -16,17 +16,21 @@ module Sine (
    ) ;
    
    //first block
-   WidthSine WidthSine_inst (.clk(clk_300)) ;
+   wire [31:0] width ;
+   
+   WidthSine WidthSine_inst (.clk(clk_300), .widthSine(width), .enable(locked)) ;
    
    // tick counter
-   TickCounter #(.MAX(1000)) tick ( .clk(clk_300)) ;
+   wire tick ;
+   
+   TickCounter #(.MAX(1000)) tick_inst ( .clk(clk_300), .en(locked), .tick(tick)) ;
    
    
    //32 bit counter
    reg [31:0] counter = 31'd0 ;
    
    always @(posedge clk_300)
-       if ( tick.tick == 1'b1)
+       if ( tick == 1'b1)
 	      counter = 31'd0 ;
 	   else
           counter <= counter + 1'b1 ;  
@@ -34,7 +38,7 @@ module Sine (
    
    
    //binary comparator
-   assign sine = ( counter < WidthSine_inst.widthSine ) ? 1'b1 : 1'b0 ;
+   assign sine = ( counter < width ) ? 1'b1 : 1'b0 ;
 
 
 

@@ -18,7 +18,7 @@ module tb_Sine ;
 
    ClockGen ClockGen_inst (.clk(clk100)) ;
 
-      ///////////////////
+    ///////////////////
    //     DUT       //
    ///////////////////
    

@@ -9,10 +9,15 @@
 set tclStart [clock seconds]
 
 ## create new Wave window (default name is "Untitled 1")
-create_wave_config "Untitled 1"
+create_wave_config "Giulia e Flavio Bocciati"
 
 ## add all top-level signals to the Wave window
 add_wave /*
+
+## add other wave form
+add_wave {{/tb_Sine/sine_inst/PLL_inst}} 
+add_wave {{/tb_Sine/sine_inst/WidthSine_inst/tick}} 
+add_wave {{/tb_Sine/sine_inst}}
 
 ## run the simulation
 run all
@@ -25,6 +30,8 @@ set tclStop [clock seconds]
 set seconds [expr $tclStop - $tclStart]
 
 puts "\nTotal elapsed-time for [info script]: [format "%.2f" [expr $seconds/60.]] minutes\n"
+
+puts "\n\ncharles\n\n\n"
 
 
 ########################################################
@@ -140,7 +147,7 @@ proc relaunch {} {
    ## optionally, restore previous waveforms setup
    #open_wave_config /path/to/file.wcfg
 
-   create_wave_config "Untitled 1" ; add_wave /*
+   create_wave_config "BOCCIATURA" ; add_wave /*
 
    ## re-run the simulation
    run all
