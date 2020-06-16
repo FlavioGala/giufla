@@ -7,9 +7,6 @@
 ///////////////////////////////////
 
 
-`include "discipline.h"
-`include "constants.h"
-
 
 `timescale 1ns / 100ps
 
@@ -53,7 +50,8 @@ module DAC (
 	  
    end // always
  
- begin
+
 
 
 endmodule
+

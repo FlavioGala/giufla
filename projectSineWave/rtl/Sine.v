@@ -53,11 +53,11 @@ module Sine (
      PLL PLL_inst
    (
     // Clock out ports
-    .clk_out1(clk_300),     // output clk_out1
+    .clk300(clk_300),     // output clk_out1
     // Status and control signals
-    .locked(locked),       // output locked
+    .locked_signal(locked),       // output locked
    // Clock in ports
-    .clk_in1(clk_100));      // input clk_in1
+    .clk100(clk_100));      // input clk_in1
 
 
 

@@ -67,24 +67,24 @@
 
 (* CORE_GENERATION_INFO = "PLL,clk_wiz_v6_0_4_0_0,{component_name=PLL,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=PLL,num_out_clk=1,clkin1_period=10.000,clkin2_period=10.000,use_power_down=false,use_reset=false,use_locked=true,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}" *)
 
-module PLL 
+module PLL
  (
   // Clock out ports
-  output        clk_out1,
+  output        clk300,
   // Status and control signals
-  output        locked,
+  output        locked_signal,
  // Clock in ports
-  input         clk_in1
+  input         clk100
  );
 
   PLL_clk_wiz inst
   (
   // Clock out ports  
-  .clk_out1(clk_out1),
+  .clk_out1(clk300),
   // Status and control signals               
-  .locked(locked),
+  .locked(locked_signal),
  // Clock in ports
-  .clk_in1(clk_in1)
+  .clk_in1(clk100)
   );
 
 endmodule
