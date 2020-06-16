@@ -1,0 +1,44 @@
+
+//
+// test bench only for the DAC
+//
+
+`timescale 1ns / 100 ps
+
+module tb_DAC ;
+
+
+   // CLOCK A 100 MHz
+   wire clk100 ;
+   
+   ClockGen ClockGen_inst (.clk(clk100)) ;
+   
+   //Input data
+   wire [31:0] I_data1 = 8'h00000004 ; 
+   
+   //wire [31:0] I_data2 = 8'h00000007 ;
+
+   
+   //////////
+   // DUT  //
+   //////////
+   
+   wire D_out ;
+   
+   DAC DAC_inst (.clk(clk100), .I_data(I_data1), .A_out(D_out)) ;
+   
+   
+   ///////////////
+   // STIMULUS  //
+   ///////////////
+   
+   initial begin
+   
+   #400 $finish ;
+   
+   end
+   
+   
+   
+endmodule
+   

@@ -4,7 +4,7 @@
 #-----------------------------------------------------------------------------------------------------
 # [Filename]       TimingConstraint.xdc
 # [Project]        Advanced Electronics Laboratory course
-# [Author]         Luca Pacher - pacher@to.infn.it
+# [Author]         Giulia e Flavio
 # [Language]       Xilinx Design Constraints (XDC) Tcl commands
 # [Created]        May 13, 2020
 # [Modified]       -
@@ -36,23 +36,12 @@ set_property -dict {PACKAGE_PIN E3 IOSTANDARD LVCMOS33} [get_ports clk]
 
 
 ## slide switch
-set_property -dict { PACKAGE_PIN A8   IOSTANDARD LVCMOS33 } [get_ports LOAD]
-
-
-## PMOD header JA
-set_property -dict { PACKAGE_PIN G13  IOSTANDARD LVCMOS33 } [get_ports { PDATA[0] }]
-set_property -dict { PACKAGE_PIN B11  IOSTANDARD LVCMOS33 } [get_ports { PDATA[1] }]
-set_property -dict { PACKAGE_PIN A11  IOSTANDARD LVCMOS33 } [get_ports { PDATA[2] }]
-set_property -dict { PACKAGE_PIN D12  IOSTANDARD LVCMOS33 } [get_ports { PDATA[3] }]
-set_property -dict { PACKAGE_PIN D13  IOSTANDARD LVCMOS33 } [get_ports { PDATA[4] }]
-set_property -dict { PACKAGE_PIN B18  IOSTANDARD LVCMOS33 } [get_ports { PDATA[5] }]
-set_property -dict { PACKAGE_PIN A18  IOSTANDARD LVCMOS33 } [get_ports { PDATA[6] }]
-set_property -dict { PACKAGE_PIN K16  IOSTANDARD LVCMOS33 } [get_ports { PDATA[7] }]
+set_property -dict { PACKAGE_PIN A8   IOSTANDARD LVCMOS33 } [get_ports sine]
 
 
 ## PMOD Header JB
-set_property -dict { PACKAGE_PIN E15   IOSTANDARD LVCMOS33 } [get_ports SI]
-set_property -dict { PACKAGE_PIN E16   IOSTANDARD LVCMOS33 } [get_ports SO]
+#set_property -dict { PACKAGE_PIN E15   IOSTANDARD LVCMOS33 } [get_ports SI]
+#set_property -dict { PACKAGE_PIN E16   IOSTANDARD LVCMOS33 } [get_ports SO]
 
 
 ###########################################
@@ -63,16 +52,17 @@ set_property -dict { PACKAGE_PIN E16   IOSTANDARD LVCMOS33 } [get_ports SO]
 set_units -capacitance pF
 
 ## on-board 100 MHz clock (default time unit in XDC is ns)
-create_clock -period 10.000 -name clk100 -waveform {0.000 5.000} -add [get_ports clk] ;   ## reg2reg timing paths
-
-## what happens if we declare 1 GHz clock instead ?
-#create_clock -period 1.000 -name clk100 -waveform {0.000 0.500} -add [get_ports clk]
+create_clock -period 10.000 -name clk_100 -waveform {0.000 5.000} -add [get_ports clk] ;   ## reg2reg timing paths
 
 ## **WARN: the load capacitance is used during power analysis when running the report_power command, but is not used during timing analysis
-set_load 10 [all_outputs]
+set_load 20 [all_outputs]
 
-## input delay for all input signals ref. to master clock (assume approx. 1/2 clock period)
-set_input_delay 5.0 -clock clk100 [get_ports SI]
-set_input_delay 5.0 -clock clk100 [get_ports LOAD]
-set_input_delay 5.0 -clock clk100 [get_ports PDATA[*]]
+## output delay 
+set_output_delay 10.0 -clock clk_100 [get_ports sine]
+
+
+
+
+
+
 

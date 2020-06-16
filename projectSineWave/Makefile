@@ -20,12 +20,7 @@
 #
 
 
-## 'make' extra flags
-MAKEFLAGS += --warn-undefined-variables --debug
-
-## Bash configuration (be picky and exit immediately on any error)
-SHELL := bash
-.SHELLFLAGS := -e -u -o pipefail -c
+ 
 
 
 
@@ -191,7 +186,7 @@ bit : xflow
 hm : $(TCL_DIR)/common/init.tcl $(TCL_DIR)/common/hm.tcl
 
 	@vivado -mode gui -source $(TCL_DIR)/common/init.tcl -source $(TCL_DIR)/common/$@.tcl -notrace -log $(LOG_DIR)/$@.log -nojournal
-##_______________________________________________________________________________________
+##_______________________________________________________________________________________npp
 
 
 ## upload bitstream to target FPGA using Hardware Manager
