@@ -22,7 +22,7 @@ module tb_Sine ;
    //     DUT       //
    ///////////////////
    
-   wire [31:0] pippo ;
+   wire pippo ;
    
    Sine sine_inst (.clk_100(clk100), .sine(pippo) ) ;
    
