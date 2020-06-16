@@ -13,7 +13,7 @@
 `timescale 1 ps / 1 ps
 
 (* NotValidForBitStream *)
-module PLL
+module PLL_netlist
    (clk_out1,
     locked,
     clk_in1);
