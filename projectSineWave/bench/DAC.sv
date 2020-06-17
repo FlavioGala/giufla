@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // DAC 32 bit
 
@@ -50,3 +51,5 @@ module DAC #(parameter real Vref = 3.3) (
    end // if 
 
 endmodule : DAC
+=======
+>>>>>>> 9f7a00057d6e3267e1cff705205415341bb242d1
