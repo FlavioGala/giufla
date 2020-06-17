@@ -34,7 +34,7 @@ module tb_DAC ;
    
    initial begin
    
-   #1000 $finish ;
+   #40000 $finish ;
    
    end
    
