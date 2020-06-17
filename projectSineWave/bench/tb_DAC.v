@@ -13,6 +13,11 @@ module tb_DAC ;
    
    ClockGen ClockGen_inst (.clk(clk100)) ;
    
+   // tickCounter
+   wire ticker ;
+   
+   TickCounter tick_inst (.clk(clk100), .tick(ticker)) ;
+   
    //Input data
    wire [7:0] I_data1 = 8'b11111111 ; 
    
@@ -25,7 +30,7 @@ module tb_DAC ;
    
    real D_out ;
    
-   DAC #(3.3) DAC_inst (.clk(clk100), .I_data(I_data1), .A_out(D_out)) ;
+   DAC #(3.3) DAC_inst (.clk(clk100), .I_data(I_data1), .A_out(D_out), .en(ticker)) ;
    
    
    ///////////////
