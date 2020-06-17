@@ -11,18 +11,35 @@ module tb_DAC ;
    // CLOCK A 100 MHz
    wire clk100 ;
    
-   ClockGen ClockGen_inst (.clk(clk100)) ;
+   ClockGen ClockGen_inst (.clk(clk100)) ;    
    
    // tickCounter
    wire ticker ;
+   wire tick_en = 1'b1 ;
+   TickCounter #(.MAX(1000)) TickCounter_inst (.clk(clk100), .tick(ticker), .en(tick_en)) ;
    
-   TickCounter tick_inst (.clk(clk100), .tick(ticker)) ;
-   
-   //Input data
-   wire [7:0] I_data1 = 8'b11111111 ; 
-   
-   //wire [31:0] I_data2 = 8'h00000007 ;
 
+   
+   
+    //////////
+   // ROM  //
+   //////////
+   
+   reg [5:0] address = 6'd0; 
+   
+   always @(posedge clk100) begin
+   
+      if (ticker) begin 
+	  
+	     address <= address + 1'b1 ;
+		 
+	  end 
+   end 
+   
+   wire [11:0] sine_data ; 
+   
+   Storage Storage_inst (.clk (clk100), .en (ticker), .addr(address), .d_out(sine_data)) ;
+   
    
    //////////
    // DUT  //
@@ -30,7 +47,7 @@ module tb_DAC ;
    
    real D_out ;
    
-   DAC #(3.3) DAC_inst (.clk(clk100), .I_data(I_data1), .A_out(D_out), .en(ticker)) ;
+   DAC #(3.3) DAC_inst (.clk(clk100), .I_data(sine_data), .en(ticker), .A_out(D_out) ) ;   
    
    
    ///////////////
@@ -39,7 +56,7 @@ module tb_DAC ;
    
    initial begin
    
-   #1000 $finish ;
+   #400000 $finish ;
    
    end
    
