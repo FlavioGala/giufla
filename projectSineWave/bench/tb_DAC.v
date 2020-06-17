@@ -14,7 +14,7 @@ module tb_DAC ;
    ClockGen ClockGen_inst (.clk(clk100)) ;
    
    //Input data
-   wire [31:0] I_data1 = 8'h00000004 ; 
+   wire [7:0] I_data1 = 8'b11111111 ; 
    
    //wire [31:0] I_data2 = 8'h00000007 ;
 
@@ -23,9 +23,9 @@ module tb_DAC ;
    // DUT  //
    //////////
    
-   wire D_out ;
+   real D_out ;
    
-   DAC DAC_inst (.clk(clk100), .I_data(I_data1), .A_out(D_out)) ;
+   DAC #(3.3) DAC_inst (.clk(clk100), .I_data(I_data1), .A_out(D_out)) ;
    
    
    ///////////////
@@ -34,7 +34,7 @@ module tb_DAC ;
    
    initial begin
    
-   #400 $finish ;
+   #1000 $finish ;
    
    end
    
