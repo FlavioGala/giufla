@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> ecb79be6b3ebd8bbfa06bbe706ba171ebeea3f1f
 
 //
 // test bench only for the DAC
@@ -54,4 +58,10 @@ module tb_DAC ;
    
    
 endmodule
+<<<<<<< HEAD
 
+=======
+   
+=======
+>>>>>>> 9f7a00057d6e3267e1cff705205415341bb242d1
+>>>>>>> ecb79be6b3ebd8bbfa06bbe706ba171ebeea3f1f
