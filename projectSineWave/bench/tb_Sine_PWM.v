@@ -8,7 +8,8 @@
 
 `timescale 1ns / 100ps
 
-module tb_Sine ;
+module tb_Sine_PWM ;
+
 
    /////////////////////////////////
    //   100 MHz clock generator   //
@@ -18,46 +19,47 @@ module tb_Sine ;
 
    ClockGen ClockGen_inst (.clk(clk100)) ;
 
-    ///////////////////
+
+   ///////////////////
    //     DUT       //
    ///////////////////
    
    wire pippo ;
    
-   Sine sine_inst (.clk_100(clk100), .sine(pippo) ) ;
+   reg PWM_enable = 1'b0 ;
+   
+   Sine_PWM sine_PWM_inst (.clk_100(clk100), .sine(pippo), .en(PWM_enable) ) ;
+   
+   
    
    ///////////////////////
    //    stimulous     //
    //////////////////////
    
- 
-   
-       /* initial begin
-	   
-	   always @ (posedge clk100) 
-	   
-      $display("\t\t   time   ") ;
-      $monitor("%d ns   ",$time) ;
-	  $stop;
-	  
-   end */
+   time t1, t2, t3, t4 ;
 
-
-   // dump waveforms into industry-standard Value Change Dump (VCD) database
    initial begin
-      $dumpfile ("waveforms.vcd") ;
-      $dumpvars ;
-   end
-     
-	 initial begin
-      #(660000) $finish ;
-	  
-	  
-	  
-	  
-   end
-   
-   
+
+      #70000 PWM_enable = 1'b1 ; 
+      t1 = $time ; 
+      $display("\n\npippo is = %.2f at time %.2f\n\n", pippo, t1) ;
+
+      #30000 PWM_enable = 1'b0 ;
+      t2 = $time ; 
+      $display("\n\npippo is = %.2f at time %.2f\n\n", pippo, t2) ;	   
+
+      #30000 PWM_enable = 1'b1 ;
+      t3 = $time ; 
+      $display("\n\npippo is = %.2f at time %.2f\n\n", pippo, t3) ;
+
+      #30000 PWM_enable = 1'b0 ;
+      t4 = $time ; 
+      $display("\n\npippo is = %.2f at time %.2f\n\n", pippo, t4) ;
+
+      #660000 $finish ;
+
+   end   
+
    
 /* integer f ;    // the $fopen Verilog task returns a 32-bit integer
 

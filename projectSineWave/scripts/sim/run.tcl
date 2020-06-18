@@ -15,9 +15,9 @@ create_wave_config "Giulia e Flavio Bocciati"
 add_wave /*
 
 ## add other wave form
-add_wave {{/tb_Sine/sine_inst/PLL_inst}} 
-add_wave {{/tb_Sine/sine_inst/WidthSine_inst/tick}} 
-add_wave {{/tb_Sine/sine_inst}}
+# add_wave {{/tb_Sine/sine_inst/PLL_inst}} 
+# add_wave {{/tb_Sine/sine_inst/WidthSine_inst/tick}} 
+# add_wave {{/tb_Sine/sine_inst}}
 
 ## run the simulation
 run all

@@ -8,12 +8,30 @@
 
 `timescale 1ns / 100ps
 
-module Sine (
+module Sine_PWM (
 
-   input  wire clk_100,
+   input  wire clk_100, en,
    output wire sine
 
    ) ;
+   
+   
+   ///////////   
+   //  PLL  //
+   ///////////
+   
+   wire clk_300 ;
+   
+   wire locked ;
+   
+     PLL PLL_inst
+   (
+    // Clock out ports
+    .clk300(clk_300),     // output clk_out1
+    // Status and control signals
+    .locked_signal(locked),       // output locked
+   // Clock in ports
+    .clk100(clk_100));      // input clk_in1
    
    //first block
    wire [31:0] width ;
@@ -38,26 +56,17 @@ module Sine (
    
    
    //binary comparator
-   assign sine = ( counter < width ) ? 1'b1 : 1'b0 ;
+   
+   wire sine_test ;
+   
+   assign sine_test = ( counter < width ) ? 1'b1 : 1'b0 ;
+   
+   assign sine = ( en == 1'b0 ) ? sine_test : 1'b1 ; // active low enable
 
 
 
-   ///////////   
-   //  PLL  //
-   ///////////
-   
-   wire clk_300 ;
-   
-   wire locked ;
-   
-     PLL PLL_inst
-   (
-    // Clock out ports
-    .clk300(clk_300),     // output clk_out1
-    // Status and control signals
-    .locked_signal(locked),       // output locked
-   // Clock in ports
-    .clk100(clk_100));      // input clk_in1
+
+
 
 
 

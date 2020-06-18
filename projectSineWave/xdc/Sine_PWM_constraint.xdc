@@ -21,8 +21,8 @@
 #
 #                     https://reference.digilentinc.com/_media/arty:arty_sch.pdf
 #
-# [Version]        1.0
-# [Revisions]      13.05.2020 - Created
+# [Version]        1.1
+# [Revisions]      18.06.2020 - Created
 #-----------------------------------------------------------------------------------------------------
 
 
@@ -36,12 +36,12 @@ set_property -dict {PACKAGE_PIN E3 IOSTANDARD LVCMOS33} [get_ports clk]
 
 
 ## slide switch
-set_property -dict { PACKAGE_PIN A8   IOSTANDARD LVCMOS33 } [get_ports sine]
+set_property -dict { PACKAGE_PIN A8   IOSTANDARD LVCMOS33 } [get_ports en]
 
 
 ## PMOD Header JB
-#set_property -dict { PACKAGE_PIN E15   IOSTANDARD LVCMOS33 } [get_ports SI]
-#set_property -dict { PACKAGE_PIN E16   IOSTANDARD LVCMOS33 } [get_ports SO]
+#set_property -dict { PACKAGE_PIN E15   IOSTANDARD LVCMOS33 } [get_ports sine]
+
 
 
 ###########################################
@@ -57,8 +57,11 @@ create_clock -period 10.000 -name clk_100 -waveform {0.000 5.000} -add [get_port
 ## **WARN: the load capacitance is used during power analysis when running the report_power command, but is not used during timing analysis
 set_load 20 [all_outputs]
 
+## input delay for all input signals ref. to master clock (assume approx. 1/2 clock period)
+set_input_delay 5.0 -clock clk100 [get_ports en]
+
 ## output delay 
-set_output_delay 10.0 -clock clk_100 [get_ports sine]
+#set_output_delay 10.0 -clock clk_100 [get_ports sine]
 
 
 

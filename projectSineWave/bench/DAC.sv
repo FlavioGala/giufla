@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 
-// DAC 32 bit
+// DAC 12 bit
 
 `timescale 1ns / 100ps
 
@@ -51,5 +50,3 @@ module DAC #(parameter real Vref = 3.3) (
    end // if 
 
 endmodule : DAC
-=======
->>>>>>> 9f7a00057d6e3267e1cff705205415341bb242d1

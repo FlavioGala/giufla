@@ -1,54 +1,44 @@
-<<<<<<< HEAD
 
 //
 // test bench only for the DAC
 //
 
-`timescale 1ns / 100 ps
+`timescale 1ns / 100ps
 
 module tb_DAC ;
 
 
    // CLOCK A 100 MHz
+   
    wire clk100 ;
    
    ClockGen ClockGen_inst (.clk(clk100)) ;    
    
-   // tickCounter
-   wire ticker ;
-   wire tick_en = 1'b1 ;
-   TickCounter #(.MAX(1000)) TickCounter_inst (.clk(clk100), .tick(ticker), .en(tick_en)) ;
+   // tickcounter
    
-
+   wire ticker;
+   wire enable = 1'b1 ;
    
-   
-    //////////
-   // ROM  //
-   //////////
-   
-   reg [5:0] address = 6'd0; 
-   
-   always @(posedge clk100) begin
-   
-      if (ticker) begin 
-	  
-	     address <= address + 1'b1 ;
-		 
-	  end 
-   end 
-   
-   wire [11:0] sine_data ; 
-   
-   Storage Storage_inst (.clk (clk100), .en (ticker), .addr(address), .d_out(sine_data)) ;
+   TickCounter TickCounter_inst (.clk(clk100), .en(enable), .tick(ticker)) ;
    
    
    //////////
    // DUT  //
    //////////
    
+   // input data
+   
+   //wire [11:0] I_data_1 = 12'd1000 ;
+   wire [11:0] I_data_2 = 12'd4000 ; //this is near the full scale of a 12 bit DAC
+   //wire [11:0] I_data_3 = 12'd500 ;
+   
+   //output data
+   
    real D_out ;
    
-   DAC #(3.3) DAC_inst (.clk(clk100), .I_data(sine_data), .en(ticker), .A_out(D_out) ) ;   
+   // dac 12 bit
+   
+   DAC #(3.3) DAC_inst (.clk(clk100), .I_data(I_data_2), .en(ticker), .A_out(D_out) ) ;   
    
    
    ///////////////
@@ -64,6 +54,4 @@ module tb_DAC ;
    
    
 endmodule
-   
-=======
->>>>>>> 9f7a00057d6e3267e1cff705205415341bb242d1
+
