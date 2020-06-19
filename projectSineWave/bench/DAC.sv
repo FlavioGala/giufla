@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 1e5d0dfb4f819810a923e36c93b7ea35fdb45afc
 
 // DAC 12 bit
 
@@ -54,7 +50,3 @@ module DAC #(parameter real Vref = 3.3) (
    end // if 
 
 endmodule : DAC
-<<<<<<< HEAD
-=======
-
->>>>>>> 1e5d0dfb4f819810a923e36c93b7ea35fdb45afc
