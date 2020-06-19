@@ -77,7 +77,7 @@ module PLL
   input         clk100
  );
 
-  PLL_clk_wiz inst
+  PLL_netlist inst
   (
   // Clock out ports  
   .clk_out1(clk300),
