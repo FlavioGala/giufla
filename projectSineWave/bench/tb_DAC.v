@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1e5d0dfb4f819810a923e36c93b7ea35fdb45afc
 
 //
 // test bench only for the DAC
@@ -55,3 +58,7 @@ module tb_DAC ;
    
    
 endmodule
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1e5d0dfb4f819810a923e36c93b7ea35fdb45afc

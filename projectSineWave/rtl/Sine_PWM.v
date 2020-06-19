@@ -27,11 +27,11 @@ module Sine_PWM (
      PLL PLL_inst
    (
     // Clock out ports
-    .clk300(clk_300),     // output clk_out1
+    .clk_out1(clk_300),     // output clk_out1
     // Status and control signals
-    .locked_signal(locked),       // output locked
+    .locked(locked),       // output locked
    // Clock in ports
-    .clk100(clk_100));      // input clk_in1
+    .clk_in1(clk_100));      // input clk_in1
    
    //first block
    wire [31:0] width ;
