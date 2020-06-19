@@ -54,6 +54,9 @@ set_units -capacitance pF
 ## on-board 100 MHz clock (default time unit in XDC is ns)
 create_clock -period 10.000 -name clk_100 -waveform {0.000 5.000} -add [get_ports clk_100] ;   ## reg2reg timing paths
 
+## Clock_in jitter
+set_input_jitter [get_clocks -clk_100 [get_ports clk_100]] 0.1
+
 ## **WARN: the load capacitance is used during power analysis when running the report_power command, but is not used during timing analysis
 set_load 20 [all_outputs]
 
@@ -61,7 +64,7 @@ set_load 20 [all_outputs]
 set_input_delay 5.0 -clock clk_100 [get_ports en]
 
 ## output delay 
-#set_output_delay 10.0 -clock clk_100 [get_ports sine]
+set_output_delay 10.0 -clock clk_100 [get_ports sine]
 
 
 
