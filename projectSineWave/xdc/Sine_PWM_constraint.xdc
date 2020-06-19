@@ -55,7 +55,7 @@ set_units -capacitance pF
 create_clock -period 10.000 -name clk_100 -waveform {0.000 5.000} -add [get_ports clk_100] ;   ## reg2reg timing paths
 
 ## Clock_in jitter
-set_input_jitter [get_clocks -clk_100 [get_ports clk_100]] 0.1
+set_input_jitter [get_clocks -of_objects [get_ports clk_100]] 0.1
 
 ## **WARN: the load capacitance is used during power analysis when running the report_power command, but is not used during timing analysis
 set_load 20 [all_outputs]
