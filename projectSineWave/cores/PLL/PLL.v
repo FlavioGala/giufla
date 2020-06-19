@@ -70,21 +70,21 @@
 module PLL
  (
   // Clock out ports
-  output        clk300,
+  output        clk_out1,
   // Status and control signals
-  output        locked_signal,
+  output        locked,
  // Clock in ports
-  input         clk100
+  input         clk_in1
  );
 
   PLL_clk_wiz inst
   (
   // Clock out ports  
-  .clk_out1(clk300),
+  .clk_out1(clk_out1),
   // Status and control signals               
-  .locked(locked_signal),
+  .locked(locked),
  // Clock in ports
-  .clk_in1(clk100)
+  .clk_in1(clk_in1)
   );
 
 endmodule

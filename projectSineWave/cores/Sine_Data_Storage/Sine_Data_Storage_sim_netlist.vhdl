@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Mon Jun 15 16:48:59 2020
--- Host        : DESKTOP-415U734 running 64-bit major release  (build 9200)
+-- Date        : Thu Jun 18 20:32:06 2020
+-- Host        : DESKTOP-MVBCFQ0 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/Users/giuli/Desktop/giufla/projectSineWave/cores/Sine_Data_Storage/Sine_Data_Storage_sim_netlist.vhdl
+--               C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/Sine_Data_Storage/Sine_Data_Storage_sim_netlist.vhdl
 -- Design      : Sine_Data_Storage
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.

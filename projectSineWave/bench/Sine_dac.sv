@@ -24,9 +24,9 @@ module Sine_dac (
    
    PLL PLL_inst (
 
-      .clk100              (clk),
-      .locked_signal    (locked),
-      .clk300           (clk300)
+      .clk_in1              (clk),
+      .locked            (locked),
+      .clk_out1          (clk300)
    
       ) ;
 	
