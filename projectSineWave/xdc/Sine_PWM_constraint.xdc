@@ -32,7 +32,7 @@
 ##############################################
 
 ## on-board 100 MHz clock signal
-set_property -dict {PACKAGE_PIN E3 IOSTANDARD LVCMOS33} [get_ports clk]
+set_property -dict {PACKAGE_PIN E3 IOSTANDARD LVCMOS33} [get_ports clk_100]
 
 
 ## slide switch
@@ -40,7 +40,7 @@ set_property -dict { PACKAGE_PIN A8   IOSTANDARD LVCMOS33 } [get_ports en]
 
 
 ## PMOD Header JB
-#set_property -dict { PACKAGE_PIN E15   IOSTANDARD LVCMOS33 } [get_ports sine]
+set_property -dict { PACKAGE_PIN E15   IOSTANDARD LVCMOS33 } [get_ports sine]
 
 
 
@@ -52,13 +52,13 @@ set_property -dict { PACKAGE_PIN A8   IOSTANDARD LVCMOS33 } [get_ports en]
 set_units -capacitance pF
 
 ## on-board 100 MHz clock (default time unit in XDC is ns)
-create_clock -period 10.000 -name clk_100 -waveform {0.000 5.000} -add [get_ports clk] ;   ## reg2reg timing paths
+create_clock -period 10.000 -name clk_100 -waveform {0.000 5.000} -add [get_ports clk_100] ;   ## reg2reg timing paths
 
 ## **WARN: the load capacitance is used during power analysis when running the report_power command, but is not used during timing analysis
 set_load 20 [all_outputs]
 
 ## input delay for all input signals ref. to master clock (assume approx. 1/2 clock period)
-set_input_delay 5.0 -clock clk100 [get_ports en]
+set_input_delay 5.0 -clock clk_100 [get_ports en]
 
 ## output delay 
 #set_output_delay 10.0 -clock clk_100 [get_ports sine]
