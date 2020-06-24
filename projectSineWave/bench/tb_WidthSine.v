@@ -20,8 +20,18 @@ module tb_WidthSine ;
    ///////////////////
    
    wire [31:0] width ;
+   wire tick_enable = 1'b1 ;
+   wire SO ;
    
-   WidthSine Width (.clk100(clk100), .widthSine(width) ) ;
+   wire [4:0] ShiftCounter = Width.ShiftCounter ;
+   wire load = Width.load ;
+   wire [7:0] pdata = Width.pdata ;
+   wire SI_en ;
+   wire soc ;
+   wire tick = Width.tick ;
+   
+   
+   WidthSine Width (.clk(clk100), .widthSine(width), .tick_enable(tick_enable), .SO(SO), .SI_en(SI_en), .soc(soc) ) ;
    
    
    ///////////////////////
@@ -30,7 +40,7 @@ module tb_WidthSine ;
    
    initial begin
    
-      #(2*650000) $finish ;
+      #(100000) $finish ;
 	  
    end
 

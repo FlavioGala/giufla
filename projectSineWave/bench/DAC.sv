@@ -13,6 +13,9 @@ module DAC #(parameter real Vref = 3.3) (
    output real A_out
    
    ) ;
+
+   
+   
    
    /////////////////
    // BEHAVIOURAL //
