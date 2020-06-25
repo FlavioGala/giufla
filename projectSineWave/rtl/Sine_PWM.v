@@ -16,6 +16,7 @@ module Sine_PWM (
    ) ;
    
    
+   
    ///////////   
    //  PLL  //
    ///////////
@@ -24,34 +25,43 @@ module Sine_PWM (
    
    wire locked ;
    
-     PLL2 PLL2_inst
-   (
-    // Clock out ports
-    .clk_out(clk_200),     // output clk_out1
-    // Status and control signals
-    .locked(locked),       // output locked
-   // Clock in ports
-    .clk_in(clk_100));      // input clk_in1
+   PLL2 PLL2_inst (
+ 
+      .clk_out       (clk_200),      // output clk_out1
+      .locked        (locked),       // output locked
+      .clk_in        (clk_100)       // input clk_in1
    
+   );      
+   
+
+
+
    //first block
+   
    wire [31:0] width ;
    
-   WidthSine WidthSine_inst (.clk(clk_200), .widthSine(width), .enable(locked)) ;
+   ROM_mapping ROM_mapping_inst (.clk(clk_200), .widthSine(width), .enable(locked)) ;
+   
+   
    
    // tick counter
+   
    wire tick ;
    
    TickCounter #(.MAX(1000)) tick_inst ( .clk(clk_200), .en(locked), .tick(tick)) ;
    
    
+   
    //32 bit counter
+   
    reg [31:0] counter = 31'd0 ;
    
-   always @(posedge clk_200)
-       if ( tick == 1'b1)
-	      counter = 31'd0 ;
-	   else
-          counter <= counter + 1'b1 ;  
+   always @(posedge clk_200) 
+   
+       if ( tick == 1'b1) counter = 31'd0 ;
+	      
+	   else               counter <= counter + 1'b1 ;
+            
    
    
    
@@ -61,14 +71,13 @@ module Sine_PWM (
    
    assign sine_test = ( counter < width ) ? 1'b1 : 1'b0 ;
    
-   assign sine = ( en == 1'b0 ) ? sine_test : 1'b1 ; // active low enable
-
-
-
-
+   assign sine      = ( en == 1'b0 ) ? sine_test : 1'b1 ;             // active low enable
 
 
 
 
 
 endmodule
+
+
+

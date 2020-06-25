@@ -16,6 +16,7 @@ module Sine_dac (
    ) ;
 
 
+
    /////////////
    //   PLL   //
    /////////////
@@ -30,67 +31,67 @@ module Sine_dac (
    
       ) ;
 	
-	
-   ////////////////
-   //   IP ROM   //
-   ////////////////
    
+   //////////////////
+   // tick counter //
+   //////////////////
    
-   //tick counter
+   wire tick ;
    
-   wire ticker ;
+   TickCounter TickCounter_inst (.clk(clk300), .en(locked), .tick(tick)) ;
    
-   TickCounter TickCounter_inst (.clk(clk300), .en(locked), .tick(ticker)) ;
+
+
+
+   ///////////////////////
+   // ROM MAPPING INST  //
+   ///////////////////////
    
+   wire [31:0] widthSine ; 
+   wire SI ;
+   wire soc ;
+   wire SI_en ;
    
-   // address of the IP ROM
+   ROM_mapping ROM_mapping_inst (
+
+      .clk                    (clk300),
+      .tick                   (tick),
+      .widthSine              (widthSine),
+	  .SO                     (SI),
+	  .SI_en                  (SI_en),
+	  .soc                    (soc)
+
+   ) ;
    
-   reg [5:0] address = 6'd0 ;
-   
-   always @(posedge clk300) begin
-   
-      if (ticker == 1'b1)
-	     address <= address + 1'b1 ;
-		 
-   end // always
-	     
-  
-   // IP_ROM_inst
-   
-   wire [11:0] D_Sine_data ;   //OBS: the output of the rom is 32 bit
-   
-   IP_ROM IP_ROM_inst (
-   
-      .clk             (clk300),
-	  .en              (ticker),
-      .addr           (address),
-	  .d_out      (D_Sine_data)    //32 bit Digital sine data
-	  
-	  ) ;
+
 
    
    /////////////
    //   DAC   //
    /////////////
 
-   real digit ;       // simple way to conver a digital signal in verilog
-                      // to an analog one in system verilog
 
-   real A_out_test ; // output to introduce the enable
+   real A_out_test ;                         // output to introduce the enable
 
-   DAC DAC_inst (
+   
+   SI_DAC SI_DAC_inst (
 
       .clk              (clk300),
-	  .I_data      (D_Sine_data),
-      .digit             (digit),	  
-      .en               (ticker),
-      .A_out        (A_out_test)
+	  .SI               (SI),
+      .soc              (soc),	  
+      .SI_en            (SI_en),
+      .A_out            (A_out_test)
 
       ) ;
+	  
+	  
 	
-   //assignment to the output
+   //conditional assignment to the output
    assign A_Sine_data = (en == 1'b1) ? A_out_test : 1.0 ;   //active high enable
 	  
 
  
 endmodule : Sine_dac
+
+
+
