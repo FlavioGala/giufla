@@ -53,7 +53,7 @@ module ROM_mapping (
    
    
    // TRANSMISSION INST 
-   Transmission_interface Transmission_interface_inst (.clk(clk), .load(load), .SI_en(SI_en), .tick(tick), .soc(soc)) ;
+   Transmission_interface Transmission_interface_inst (.clk(clk), .LD_pdata(load), .CS(SI_en), .RST(tick), .NOT_LD(soc)) ;
    
    
 
