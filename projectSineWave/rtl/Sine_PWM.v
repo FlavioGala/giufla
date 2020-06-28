@@ -36,7 +36,7 @@ module Sine_PWM (
    //first block
    wire [31:0] width ;
    
-   WidthSine WidthSine_inst (.clk(clk_200), .widthSine(width), .enable(locked)) ;
+   WidthSine WidthSine_inst (.clk(clk_200), .widthSine(width), .tick_enable(locked)) ;
    
    // tick counter
    wire tick ;
