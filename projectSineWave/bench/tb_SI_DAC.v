@@ -16,7 +16,7 @@ module tb_SI_DAC ;
    
    reg  SDI  ;
    reg  CS  = 1'b0;
-   reg  LD  = 1'b0;
+   reg  NOT_LD  = 1'b0;
    real A_out ;
    wire [11:0] I_data = SI_DAC_inst.pdata ;
    
@@ -25,7 +25,7 @@ module tb_SI_DAC ;
       .SI           (SDI),
 	  .clk          (clk100),
 	  .SI_en        (CS),
-	  .soc          (LD),
+	  .soc          (NOT_LD),
 	  .A_out        (A_out)
 	  
 	  ) ;
@@ -56,13 +56,13 @@ module tb_SI_DAC ;
    
    always #(10005) begin
       
-      LD = 1'b1 ;
+      NOT_LD = 1'b1 ;
       
-      #10 LD = 1'b0	; 
+      #10 NOT_LD = 1'b0	; 
    
    end // always
    
-   always @( posedge LD ) begin
+   always @( posedge NOT_LD ) begin
   
       Aout_expected = 0.0 ;
   

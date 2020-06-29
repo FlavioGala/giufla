@@ -25,7 +25,7 @@ module tb_Sine_dac ;
    
    real A_out ;
    real A_out_test = Sine_dac_inst.A_out_test ;
-   wire SI = Sine_dac_inst.SI ;
+   wire SDI = Sine_dac_inst.SI ;
 
    Sine_dac Sine_dac_inst (
 

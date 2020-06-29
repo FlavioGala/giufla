@@ -29,12 +29,12 @@ module SI_DAC (
    
    SIPO_ShiftRegister #(.N(11)) SIPO_ShiftRegister_inst (
    
-      .clk             (clk),
-	  .SI              (SI),
-	  .soc             (soc),
+      .clk               (clk),
+	  .SDI                (SI),
+	  .NOT_LD            (soc),
 	  .PDATA           (pdata),
-	  .SO              (SO),
-	  .SI_en           (SI_en)
+	  .SO                 (SO),
+	  .CS              (SI_en)
      
    ) ;
    
