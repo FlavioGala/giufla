@@ -7,6 +7,8 @@
 module tb_ROM ;
 
 
+
+
    /////////////////////////////////
    //   100 MHz clock generator   //
    /////////////////////////////////
@@ -16,13 +18,19 @@ module tb_ROM ;
    ClockGen   ClockGen_inst (.clk(clk100)) ;
 
 
-   /////////////////////////////////////////////////
-   //    100 KHz read-enable generator as "tick"   //
-   /////////////////////////////////////////////////
 
+
+   /////////////////////////////////////////////////
+   //    100 KHz read-enable generator as "tick"  //
+   /////////////////////////////////////////////////
+   
    wire rd_enable ;
+   wire tick_enable = 1'b1 ;
+   
+   TickCounter  #(.MAX(1000)) TickCounter_inst ( .clk(clk100), .tick(rd_enable), .en(tick_enable)) ;
 
-   TickCounter  #(.MAX(10)) TickCounter_inst ( .clk(clk100), .tick(rd_enable)) ;
+
+
 
 
    ///////////////////////////
@@ -53,7 +61,8 @@ module tb_ROM ;
 
    initial begin
 
-      #(2*64*1000) $finish ;
+      #(2*64*10000) $finish ;
+
    end
 
 

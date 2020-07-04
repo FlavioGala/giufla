@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../Sine_Data_Storage/sim/Sine_Data_Storage.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

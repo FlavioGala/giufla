@@ -1,8 +1,8 @@
 #
-# Sample Makefile to test tools installation and setup.
+# Makefile to simplify the flow.
 #
-# Luca Pacher - pacher@to.infn.it
-# May 8, 2020
+# Giulia e Flavio
+# june 14, 2020
 #
 
 #######################################
@@ -20,12 +20,7 @@
 #
 
 
-## 'make' extra flags
-MAKEFLAGS += --warn-undefined-variables --debug
-
-## Bash configuration (be picky and exit immediately on any error)
-SHELL := bash
-.SHELLFLAGS := -e -u -o pipefail -c
+ 
 
 
 
@@ -39,7 +34,7 @@ SHELL := bash
 # By default all rtl/*.v and bench/*.v sources are parsed and compiled using xvlog,
 # then tb_$(dut) is considered as testbench module when xelab is invoked for elaboration.
 #
-dut := Sine
+dut := Sine_PWM
 
 
 
@@ -191,7 +186,7 @@ bit : xflow
 hm : $(TCL_DIR)/common/init.tcl $(TCL_DIR)/common/hm.tcl
 
 	@vivado -mode gui -source $(TCL_DIR)/common/init.tcl -source $(TCL_DIR)/common/$@.tcl -notrace -log $(LOG_DIR)/$@.log -nojournal
-##_______________________________________________________________________________________
+##_______________________________________________________________________________________npp
 
 
 ## upload bitstream to target FPGA using Hardware Manager
@@ -216,8 +211,8 @@ clean :
 
 	@$(RM) *.log *.jou *.pb *.wdb $(LOG_DIR)/*
 	@$(RMDIR) xsim.dir .Xil
-	##@$(RMDIR) work/sim/*
-	##@$(RMDIR) work/impl/*
+##@$(RMDIR) work/sim/*
+##@$(RMDIR) work/impl/*
 ##_______________________________________________________________________________________
 
 
@@ -245,5 +240,13 @@ help :
 	@$(ECHO) " - make upload      Upload bitsream to target FPGA using Hardware Manager"
 	@$(ECHO) " - make flash       Program external Quad Flash memory" 
 	@$(ECHO) " - make clean       Delete all log files and temporary files\n"
+	@$(ECHO) " - make charles     CHARLES
 ##_______________________________________________________________________________________
+
+## charles
+.PHONY : charles
+charles :
+
+	@$(ECHO) "\n\n\n    CHARLES\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+##________________________________________________________________________________________
 
