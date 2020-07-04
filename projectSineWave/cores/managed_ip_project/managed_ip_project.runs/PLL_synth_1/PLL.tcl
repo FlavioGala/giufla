@@ -27,14 +27,14 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/managed_ip_project/managed_ip_project.cache/wt [current_project]
 set_property parent.project_path C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/managed_ip_project/managed_ip_project.xpr [current_project]
-set_property XPM_LIBRARIES XPM_CDC [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths c:/Users/Garripoli/Desktop/giufla/projectSineWave/cores [current_project]
 update_ip_catalog
 set_property ip_output_repo c:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/managed_ip_project/managed_ip_project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet c:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL.xci
+read_ip -quiet C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL.xci
 set_property used_in_implementation false [get_files -all c:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_ooc.xdc]
@@ -92,32 +92,32 @@ write_checkpoint -force -noxdef PLL.dcp
 create_report "PLL_synth_1_synth_report_utilization_0" "report_utilization -file PLL_utilization_synth.rpt -pb PLL_utilization_synth.pb"
 
 if { [catch {
-  file copy -force C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/managed_ip_project/managed_ip_project.runs/PLL_synth_1/PLL.dcp c:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL.dcp
+  file copy -force C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/managed_ip_project/managed_ip_project.runs/PLL_synth_1/PLL.dcp C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub c:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_stub.v
+  write_verilog -force -mode synth_stub C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub c:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_stub.vhdl
+  write_vhdl -force -mode synth_stub C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim c:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_sim_netlist.v
+  write_verilog -force -mode funcsim C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim c:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -127,32 +127,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/managed_ip_project/managed_ip_project.runs/PLL_synth_1/PLL.dcp c:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL.dcp
+  file copy -force C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/managed_ip_project/managed_ip_project.runs/PLL_synth_1/PLL.dcp C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/managed_ip_project/managed_ip_project.runs/PLL_synth_1/PLL_stub.v c:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_stub.v
+  file rename -force C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/managed_ip_project/managed_ip_project.runs/PLL_synth_1/PLL_stub.v C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/managed_ip_project/managed_ip_project.runs/PLL_synth_1/PLL_stub.vhdl c:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_stub.vhdl
+  file rename -force C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/managed_ip_project/managed_ip_project.runs/PLL_synth_1/PLL_stub.vhdl C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/managed_ip_project/managed_ip_project.runs/PLL_synth_1/PLL_sim_netlist.v c:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_sim_netlist.v
+  file rename -force C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/managed_ip_project/managed_ip_project.runs/PLL_synth_1/PLL_sim_netlist.v C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/managed_ip_project/managed_ip_project.runs/PLL_synth_1/PLL_sim_netlist.vhdl c:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_sim_netlist.vhdl
+  file rename -force C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/managed_ip_project/managed_ip_project.runs/PLL_synth_1/PLL_sim_netlist.vhdl C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -161,13 +161,13 @@ if { [catch {
 
 if {[file isdir C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/ip_user_files/ip/PLL]} {
   catch { 
-    file copy -force c:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_stub.v C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/ip_user_files/ip/PLL
+    file copy -force C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_stub.v C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/ip_user_files/ip/PLL
   }
 }
 
 if {[file isdir C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/ip_user_files/ip/PLL]} {
   catch { 
-    file copy -force c:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_stub.vhdl C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/ip_user_files/ip/PLL
+    file copy -force C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_stub.vhdl C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/ip_user_files/ip/PLL
   }
 }
 file delete __synthesis_is_running__

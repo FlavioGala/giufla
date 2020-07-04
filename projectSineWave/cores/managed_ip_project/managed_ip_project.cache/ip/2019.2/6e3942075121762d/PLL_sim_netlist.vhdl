@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
 -- Date        : Sat Jul  4 10:49:08 2020
 -- Host        : DESKTOP-MVBCFQ0 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
+--               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ PLL_sim_netlist.vhdl
 -- Design      : PLL
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,17 +14,15 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity PLL_PLL_clk_wiz is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PLL_clk_wiz is
   port (
     clk_out1 : out STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of PLL_PLL_clk_wiz : entity is "PLL_clk_wiz";
-end PLL_PLL_clk_wiz;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PLL_clk_wiz;
 
-architecture STRUCTURE of PLL_PLL_clk_wiz is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PLL_clk_wiz is
   signal clk_in1_PLL : STD_LOGIC;
   signal clk_out1_PLL : STD_LOGIC;
   signal clkfbout_PLL : STD_LOGIC;
@@ -128,19 +126,19 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity PLL is
+entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   port (
     clk_out1 : out STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
-  attribute NotValidForBitStream of PLL : entity is true;
-end PLL;
+  attribute NotValidForBitStream of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is true;
+end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix;
 
-architecture STRUCTURE of PLL is
+architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 begin
-inst: entity work.PLL_PLL_clk_wiz
+inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_PLL_clk_wiz
      port map (
       clk_in1 => clk_in1,
       clk_out1 => clk_out1,

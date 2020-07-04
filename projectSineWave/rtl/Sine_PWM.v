@@ -25,11 +25,11 @@ module Sine_PWM (
    
    wire locked ;
    
-   PLL2 PLL2_inst (
+   PLL PLL_inst (
  
-      .clk_out       (clk_200),      // output clk_out1
-      .locked        (locked),       // output locked
-      .clk_in        (clk_100)       // input clk_in1
+      .clk_out1       (clk_200),      // output clk_out1
+      .locked          (locked),       // output locked
+      .clk_in1        (clk_100)       // input clk_in1
    
    );      
    
@@ -40,7 +40,7 @@ module Sine_PWM (
    
    wire [31:0] width ;
    
-   ROM_mapping ROM_mapping_inst (.clk(clk_200), .widthSine(width), .enable(locked)) ;
+   ROM_mapping ROM_mapping_inst (.clk(clk_200), .widthSine(width), .tick(tick)) ;
    
    
    
