@@ -44,8 +44,8 @@ for line in file :
 
 Sine_plot.Draw()
 
-Sine_plot.GetXaxis().SetRangeUser(-0.1, 300)
-Sine_plot.GetYaxis().SetRangeUser(0, 3.5)
+Sine_plot.GetXaxis().SetRangeUser(50, 150)
+Sine_plot.GetYaxis().SetRangeUser(-5, 5)
 
 
 ## cosmetics
@@ -67,8 +67,8 @@ Sine_graph  = TGraph(k,x,y);
 Sine_graph.SetTitle( 'Sine from DAC graph' )
 Sine_graph.GetXaxis().SetTitle( 't [ns]' )
 Sine_graph.GetYaxis().SetTitle( 'V [V]' )
-#Sine_graph.GetXaxis().SetRangeUser(100000, 1000000)
-#Sine_graph.GetYaxis().SetRangeUser(-0.1, 3.5)
+Sine_graph.GetXaxis().SetRangeUser(400000, 800000)
+Sine_graph.GetYaxis().SetRangeUser(-5, 5)
 
 Sine_graph.Draw("APC");
 

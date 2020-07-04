@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sun Jun 14 15:26:48 2020
-# Process ID: 10712
+# Start of session at: Sat Jul  4 10:47:13 2020
+# Process ID: 5996
 # Current directory: C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/managed_ip_project/managed_ip_project.runs/PLL_synth_1
 # Command line: vivado.exe -log PLL.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source PLL.tcl
 # Log file: C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/managed_ip_project/managed_ip_project.runs/PLL_synth_1/PLL.vds
@@ -22,9 +22,9 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35ti'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35ti'
 INFO: [Device 21-403] Loading part xc7a35ticsg324-1L
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 9988 
+INFO: Helper process launched with PID 2384 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:21 . Memory (MB): peak = 780.266 ; gain = 235.090
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 779.641 ; gain = 234.078
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'PLL' [c:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL.v:70]
 INFO: [Synth 8-6157] synthesizing module 'PLL_clk_wiz' [c:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_clk_wiz.v:68]
@@ -37,11 +37,11 @@ INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2019.2/scripts
 INFO: [Synth 8-6155] done synthesizing module 'IBUF' (1#1) [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:32937]
 INFO: [Synth 8-6157] synthesizing module 'PLLE2_ADV' [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:61416]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
-	Parameter CLKFBOUT_MULT bound to: 9 - type: integer 
+	Parameter CLKFBOUT_MULT bound to: 10 - type: integer 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
 	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
 	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: double 
-	Parameter CLKOUT0_DIVIDE bound to: 3 - type: integer 
+	Parameter CLKOUT0_DIVIDE bound to: 5 - type: integer 
 	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
 	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
 	Parameter CLKOUT1_DIVIDE bound to: 1 - type: integer 
@@ -73,7 +73,7 @@ INFO: [Synth 8-6155] done synthesizing module 'BUFG' (3#1) [C:/Xilinx/Vivado/201
 INFO: [Synth 8-6155] done synthesizing module 'PLL_clk_wiz' (4#1) [c:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL_clk_wiz.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'PLL' (5#1) [c:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/PLL/PLL.v:70]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 853.371 ; gain = 308.195
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 855.750 ; gain = 310.188
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -86,12 +86,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:30 . Memory (MB): peak = 853.371 ; gain = 308.195
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 855.750 ; gain = 310.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:30 . Memory (MB): peak = 853.371 ; gain = 308.195
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 855.750 ; gain = 310.188
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 853.371 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 855.750 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -111,30 +111,30 @@ Parsing XDC File [C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/manage
 Finished Parsing XDC File [C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/managed_ip_project/managed_ip_project.runs/PLL_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 861.906 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 861.371 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.256 . Memory (MB): peak = 861.906 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.143 . Memory (MB): peak = 861.430 ; gain = 0.059
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:32 ; elapsed = 00:00:59 . Memory (MB): peak = 861.906 ; gain = 316.730
+Finished Constraint Validation : Time (s): cpu = 00:00:32 ; elapsed = 00:00:43 . Memory (MB): peak = 861.430 ; gain = 315.867
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35ticsg324-1L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:32 ; elapsed = 00:00:59 . Memory (MB): peak = 861.906 ; gain = 316.730
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:32 ; elapsed = 00:00:43 . Memory (MB): peak = 861.430 ; gain = 315.867
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/managed_ip_project/managed_ip_project.runs/PLL_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:59 . Memory (MB): peak = 861.906 ; gain = 316.730
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:43 . Memory (MB): peak = 861.430 ; gain = 315.867
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:33 ; elapsed = 00:01:00 . Memory (MB): peak = 861.906 ; gain = 316.730
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:44 . Memory (MB): peak = 861.430 ; gain = 315.867
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -170,7 +170,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:01:05 . Memory (MB): peak = 861.906 ; gain = 316.730
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:48 . Memory (MB): peak = 861.430 ; gain = 315.867
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -182,13 +182,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:56 ; elapsed = 00:01:29 . Memory (MB): peak = 899.180 ; gain = 354.004
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:01:07 . Memory (MB): peak = 901.688 ; gain = 356.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:01:29 . Memory (MB): peak = 899.180 ; gain = 354.004
+Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:01:07 . Memory (MB): peak = 901.688 ; gain = 356.125
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -200,7 +200,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:01:29 . Memory (MB): peak = 908.703 ; gain = 363.527
+Finished Technology Mapping : Time (s): cpu = 00:00:54 ; elapsed = 00:01:08 . Memory (MB): peak = 911.215 ; gain = 365.652
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -224,13 +224,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:13 ; elapsed = 00:01:49 . Memory (MB): peak = 924.512 ; gain = 379.336
+Finished IO Insertion : Time (s): cpu = 00:01:09 ; elapsed = 00:01:23 . Memory (MB): peak = 926.031 ; gain = 380.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:13 ; elapsed = 00:01:49 . Memory (MB): peak = 924.512 ; gain = 379.336
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:09 ; elapsed = 00:01:23 . Memory (MB): peak = 926.031 ; gain = 380.469
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -249,25 +249,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:13 ; elapsed = 00:01:49 . Memory (MB): peak = 924.512 ; gain = 379.336
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:09 ; elapsed = 00:01:23 . Memory (MB): peak = 926.031 ; gain = 380.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:13 ; elapsed = 00:01:49 . Memory (MB): peak = 924.512 ; gain = 379.336
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:09 ; elapsed = 00:01:23 . Memory (MB): peak = 926.031 ; gain = 380.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:13 ; elapsed = 00:01:49 . Memory (MB): peak = 924.512 ; gain = 379.336
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:09 ; elapsed = 00:01:23 . Memory (MB): peak = 926.031 ; gain = 380.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:13 ; elapsed = 00:01:49 . Memory (MB): peak = 924.512 ; gain = 379.336
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:09 ; elapsed = 00:01:23 . Memory (MB): peak = 926.031 ; gain = 380.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -296,34 +296,34 @@ Report Instance Areas:
 |2     |  inst   |PLL_clk_wiz |     4|
 +------+---------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:13 ; elapsed = 00:01:49 . Memory (MB): peak = 924.512 ; gain = 379.336
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:09 ; elapsed = 00:01:24 . Memory (MB): peak = 926.031 ; gain = 380.469
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:54 ; elapsed = 00:01:36 . Memory (MB): peak = 924.512 ; gain = 370.801
-Synthesis Optimization Complete : Time (s): cpu = 00:01:14 ; elapsed = 00:01:50 . Memory (MB): peak = 924.512 ; gain = 379.336
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:48 ; elapsed = 00:01:15 . Memory (MB): peak = 926.031 ; gain = 374.789
+Synthesis Optimization Complete : Time (s): cpu = 00:01:09 ; elapsed = 00:01:24 . Memory (MB): peak = 926.031 ; gain = 380.469
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 924.512 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 926.031 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 940.016 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 940.398 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 28 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:27 ; elapsed = 00:02:13 . Memory (MB): peak = 940.016 ; gain = 644.566
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 940.016 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:20 ; elapsed = 00:01:41 . Memory (MB): peak = 940.398 ; gain = 642.809
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 940.398 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/managed_ip_project/managed_ip_project.runs/PLL_synth_1/PLL.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP PLL, cache-ID = f49902b1e1fd390f
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 940.016 ; gain = 0.000
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP PLL, cache-ID = 6e3942075121762d
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 940.398 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Garripoli/Desktop/giufla/projectSineWave/cores/managed_ip_project/managed_ip_project.runs/PLL_synth_1/PLL.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file PLL_utilization_synth.rpt -pb PLL_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Jun 14 15:29:23 2020...
+INFO: [Common 17-206] Exiting Vivado at Sat Jul  4 10:49:09 2020...

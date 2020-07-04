@@ -31,7 +31,7 @@ module tb_DAC ;
    
    // dac 12 bit
    
-   DAC #(3.3) DAC_inst (.clk(clk100), .I_data(I_data), .en(soc), .A_out(D_out) ) ;   
+   DAC #(5.0) DAC_inst (.clk(clk100), .I_data(I_data), .en(soc), .A_out(D_out) ) ;   
    
    
    

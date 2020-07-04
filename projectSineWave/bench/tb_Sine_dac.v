@@ -25,7 +25,7 @@ module tb_Sine_dac ;
    
    real A_out ;
    real A_out_test = Sine_dac_inst.A_out_test ;
-   wire SI = Sine_dac_inst.SI ;
+   wire SDI = Sine_dac_inst.SI ;
 
    Sine_dac Sine_dac_inst (
 
@@ -43,62 +43,54 @@ module tb_Sine_dac ;
 	//////////////////
 	
 	
+   integer  i ;
+   integer  j ;
+   real     Aout_expected = 0.0 ;
+   real     Vref = 5.0 ;
+   real     digit ;
+   wire     NOT_LD = Sine_dac_inst.soc ;
+   wire     [11:0] I_data = Sine_dac_inst.SI_DAC_inst.pdata ;
+	
+	
 	
 	// FIRST STIMOLOUS FOR THE ANABLE
 	
-	/* initial begin
+   initial begin
 	
-	   #70000 dac_enable = 1'b0 ; 
-	   
-	   #30000 dac_enable = 1'b1 ;  
-	   
-	   #30000 dac_enable = 1'b0 ;
-	   
-	   #30000 dac_enable = 1'b1 ;
-	   
-	   #100000 $finish ;
-	   
-	end    */
-	
-	
-	
-   // SECOND STIMOLOUS	
+      #70000 dac_enable = 1'b0 ; 
+      #30000 dac_enable = 1'b1 ;  
+      #30000 dac_enable = 1'b0 ;
+      #30000 dac_enable = 1'b1 ;
+      #100000 $finish ;
+	  
+   end   
 
-   integer  i ;
-   integer  j ;
-   real     k = 0.0 ;
-   real     Vref = 3.3 ;
-   real     digit ;
-   wire     soc = Sine_dac_inst.soc ;
-   wire     [11:0] I_data = Sine_dac_inst.SI_DAC_inst.pdata ;
-      
-   always @(posedge soc) begin
+   always @(posedge NOT_LD) begin
 	  
-	  k = 0.0 ;
+      Aout_expected = 0.0 ;
 	  
-	  for ( i=0 ; i <= 11 ; i = i + 1 ) begin  
+      for ( i = 0 ; i <= 11 ; i = i + 1 ) begin  
 		  
-        real a = 2.0 ;
+         real a = 2.0 ;
 			   
-	    for ( j = 11 ; j > i ; j = j - 1 ) begin
+         for ( j = 11 ; j > i ; j = j - 1 ) begin
 			 
-		   a = a*2.0 ;
+            a = a*2.0 ;
 				
-		end // for
+         end // for
 			
-        assign digit = I_data[i] ;
+         assign digit = I_data[i] ;
 			   
-		k = k + Vref*(digit/a) ;
+         Aout_expected = Aout_expected + Vref*(digit/a) ;
 		
       end // for
 	  
-	  $display ( "\n\n D_out should be : %f V at time %d ns \n\n" ,  k , $time ) ;
-	  
+      $display ( "\n\n D_out should be : %f V at time %d ns \n\n" ,  Aout_expected , $time ) ;
 	  
    end // always
 	   
 	   
-	   
+/* 	   
    // THIRD STIMOLOUS
 	
    integer f ;    
@@ -112,11 +104,11 @@ module tb_Sine_dac ;
    end
 
 
-   always @(posedge soc) begin                // register dac data whenever the soc is asserted 
+   always @(posedge NOT_LD) begin                // register dac data whenever the soc is asserted 
       
 	  $fdisplay( f , "%f" , A_out , $time ) ;
    
-   end 	
+   end 	 */
 	   
 endmodule
 

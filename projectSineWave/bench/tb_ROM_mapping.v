@@ -1,6 +1,10 @@
-//test bench della widthSine
 
-//giulia e flavio
+//////////////////////////////////////////////////////////////
+// A simple test bench to simulate the ROM mapping module   //
+//                                                          //
+// Giulia e Flavio                                          //
+// spring 2020                                              //
+//////////////////////////////////////////////////////////////
 
 
 `timescale 1ns / 100ps

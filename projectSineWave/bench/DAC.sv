@@ -9,7 +9,7 @@
 
 `timescale 1ns / 100ps
 
-module DAC #(parameter real Vref = 3.3) (
+module DAC #(parameter real Vref = 5.0) (
 
    input  wire clk,
    input  wire [11:0] I_data,
@@ -36,25 +36,23 @@ module DAC #(parameter real Vref = 3.3) (
 		 
          A_out = 0.0 ;	
 	  	     	 	 
-	     for ( i=0 ; i <= 11 ; i = i + 1 ) begin  
+         for ( i=0 ; i <= 11 ; i = i + 1 ) begin  
 		  
             real a = 2.0 ;
 			   
-			for ( j = 11 ; j > i ; j = j - 1 ) begin
+            for ( j = 11 ; j > i ; j = j - 1 ) begin
 			 
-			   a = a*2.0 ;
+               a = a*2.0 ;
 				
-		    end // for
+            end // for
 			
             assign digit = I_data[i] ;
 			   
-		    A_out = A_out + Vref*(digit/a) ;
-			
-		    //$display( "A_out is = %.2f a is %.2f digit is %.2f", A_out, a, digit ) ;   // just for a test
+            A_out = A_out + Vref*(digit/a) ;
            		
-	     end // for
+         end // for
 		 
-	  end // if  
+      end // if  
 
    end // always
    

@@ -21,13 +21,13 @@ module Sine_dac (
    //   PLL   //
    /////////////
    
-   wire clk300, locked ;
+   wire clk200, locked ;
    
    PLL PLL_inst (
 
       .clk_in1              (clk),
       .locked            (locked),
-      .clk_out1          (clk300)
+      .clk_out1          (clk200)
    
       ) ;
 	
@@ -38,7 +38,7 @@ module Sine_dac (
    
    wire tick ;
    
-   TickCounter TickCounter_inst (.clk(clk300), .en(locked), .tick(tick)) ;
+   TickCounter TickCounter_inst (.clk(clk200), .en(locked), .tick(tick)) ;
    
 
 
@@ -54,7 +54,7 @@ module Sine_dac (
    
    ROM_mapping ROM_mapping_inst (
 
-      .clk                    (clk300),
+      .clk                    (clk200),
       .tick                   (tick),
       .widthSine              (widthSine),
 	  .SO                     (SI),
@@ -76,7 +76,7 @@ module Sine_dac (
    
    SI_DAC SI_DAC_inst (
 
-      .clk              (clk300),
+      .clk              (clk200),
 	  .SI               (SI),
       .soc              (soc),	  
       .SI_en            (SI_en),

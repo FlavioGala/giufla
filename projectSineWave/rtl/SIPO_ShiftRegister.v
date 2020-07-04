@@ -10,10 +10,10 @@
 
 module SIPO_ShiftRegister #(parameter integer N = 7, parameter [N:0] INIT = 100'hFFFFFF) (
    
-   input  wire SI_en,
+   input  wire CS,
    input  wire clk,
-   input  wire SI,                   // serial-in
-   input  wire soc,         
+   input  wire SDI,                   // serial-in
+   input  wire NOT_LD,         
    output wire SO,
    output reg  [N:0] PDATA
 
@@ -23,18 +23,18 @@ module SIPO_ShiftRegister #(parameter integer N = 7, parameter [N:0] INIT = 100'
    
    reg [N:0] q = INIT ;                 
    
-   assign SO = q[N] ;              // assign to SO the MSB
+   assign SO = q[N] ;             
    
    always @(posedge clk) begin
    
-      if (SI_en)
-	     q[N:0] <= { q[N-1:0] , SI } ; 
+      if (CS)
+	     q[N:0] <= { q[N-1:0] , SDI } ; 
 		 
    end // always
    
    always @(posedge clk) begin
    
-      if(soc)
+      if(NOT_LD)
 	     PDATA <= q[N:0] ;      		 
 	  
    end // always 

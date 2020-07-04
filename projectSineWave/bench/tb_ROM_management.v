@@ -22,64 +22,39 @@ module tb_ROM_management ;
 
    ClockGen ClockGen_inst (.clk(clk100)) ;
 
-
-
-   //////////////////
-   // TICK COUNTER //
-   //////////////////
    
-   reg tick ;
-   reg [31:0] tickCounter = 32'd0 ;
-   parameter integer MAX  = 1000 ;
-   
-   always @(posedge clk100) begin
-      
-	  if ( tickCounter == MAX ) begin
-	     
-		 tick = 1'b1 ;
-		 tickCounter <= 32'd0 ;
-		 
-	  end // if
-		 
-      else begin
-	     
-		 tick = 1'b0 ;
-	     tickCounter <= tickCounter + 1'b1 ;
-   
-      end // else 
-
-   end // always	  
-   
-   
+  
    
    ///////////////////
    //     DUT       //
    ///////////////////
    
+   reg RST = 1'b0;
    wire SO ;
-   reg [31:0] Data_bus ;
+   reg [31:0] data_bus ;
    
-   wire load = ROM_management.load ;
+   wire LD_pdata ;
    wire [7:0] pdata = ROM_management.pdata ;
-   wire [4:0] ShiftCounter = ROM_management.ShiftCounter ; 
+   //wire [4:0] ShiftCounter = ROM_management.ShiftCounter ; 
    
-   ROM_management ROM_management_inst (.clk(clk100), .tick(tick), .SO(SO), .Data_bus(Data_bus)) ;
+   ROM_management ROM_management_inst (.clk(clk100), .tick(RST), .SO(SO), .Data_bus(data_bus), .load(LD_pdata)) ;
 
 
 
    ////////////////
-   // STIMOLOUS  //
+   // STIMULUS  //
    ////////////////
    
-   always #(20000) begin
+   always #(20500) begin
    
-      Data_bus = $random ;
+      data_bus = $random ;
+      #1005 RST = 1'b1 ;
+      #10 RST = 1'b0 ;
 	  
    end // always
    
-   
    initial begin
-   
+      
       #100000 $finish ;
 	    
    end // initial

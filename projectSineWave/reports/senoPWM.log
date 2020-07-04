@@ -1,4 +1,622 @@
 Circuit: * C:\Users\giuli\Desktop\giufla\projectSineWave\reports\senoPWM.asc
 
+<<<<<<< HEAD
 Fatal Error: Could not open file "c:\users\garripoli\desktop\giufla\projectsinewave\python\datiltspice_fin.txt" in PWL
+=======
+V4: Removing PWL point (1.0025e-005,3.3)
+V4: Removing PWL point (1.5025e-005,0)
+V4: Removing PWL point (2.0025e-005,3.3)
+V4: Removing PWL point (2.5515e-005,0)
+V4: Removing PWL point (3.0025e-005,3.3)
+V4: Removing PWL point (3.6005e-005,0)
+V4: Removing PWL point (4.0025e-005,3.3)
+V4: Removing PWL point (4.6475e-005,0)
+V4: Removing PWL point (5.0025e-005,3.3)
+V4: Removing PWL point (5.6935e-005,0)
+V4: Removing PWL point (6.0025e-005,3.3)
+V4: Removing PWL point (6.7385e-005,0)
+V4: Removing PWL point (7.0025e-005,3.3)
+V4: Removing PWL point (7.7805e-005,0)
+V4: Removing PWL point (8.0025e-005,3.3)
+V4: Removing PWL point (8.8195e-005,0)
+V4: Removing PWL point (9.0025e-005,3.3)
+V4: Removing PWL point (9.8565e-005,0)
+V4: Removing PWL point (0.000100025,3.3)
+V4: Removing PWL point (0.000108895,0)
+V4: Removing PWL point (0.000110025,3.3)
+V4: Removing PWL point (0.000119185,0)
+V4: Removing PWL point (0.000120025,3.3)
+V4: Removing PWL point (0.000129435,0)
+V4: Removing PWL point (0.000130025,3.3)
+V4: Removing PWL point (0.000139645,0)
+V4: Removing PWL point (0.000140025,3.3)
+V4: Removing PWL point (0.000149805,0)
+V4: Removing PWL point (0.000150025,3.3)
+V4: Removing PWL point (0.000159925,0)
+V4: Removing PWL point (0.000160025,3.3)
+V4: Removing PWL point (0.000170025,3.3)
+V4: Removing PWL point (0.000190025,3.3)
+V4: Removing PWL point (0.000199925,0)
+V4: Removing PWL point (0.000200025,3.3)
+V4: Removing PWL point (0.000209805,0)
+V4: Removing PWL point (0.000210025,3.3)
+V4: Removing PWL point (0.000219645,0)
+V4: Removing PWL point (0.000220025,3.3)
+V4: Removing PWL point (0.000229435,0)
+V4: Removing PWL point (0.000230025,3.3)
+V4: Removing PWL point (0.000239185,0)
+V4: Removing PWL point (0.000240025,3.3)
+V4: Removing PWL point (0.000248895,0)
+V4: Removing PWL point (0.000250025,3.3)
+V4: Removing PWL point (0.000258565,0)
+V4: Removing PWL point (0.000260025,3.3)
+V4: Removing PWL point (0.000268195,0)
+V4: Removing PWL point (0.000270025,3.3)
+V4: Removing PWL point (0.000277805,0)
+V4: Removing PWL point (0.000280025,3.3)
+V4: Removing PWL point (0.000287385,0)
+V4: Removing PWL point (0.000290025,3.3)
+V4: Removing PWL point (0.000296935,0)
+V4: Removing PWL point (0.000300025,3.3)
+V4: Removing PWL point (0.000306475,0)
+V4: Removing PWL point (0.000310025,3.3)
+V4: Removing PWL point (0.000316005,0)
+V4: Removing PWL point (0.000320025,3.3)
+V4: Removing PWL point (0.000325515,0)
+V4: Removing PWL point (0.000330025,3.3)
+V4: Removing PWL point (0.000335025,0)
+V4: Removing PWL point (0.000340025,3.3)
+V4: Removing PWL point (0.000344535,0)
+V4: Removing PWL point (0.000350025,3.3)
+V4: Removing PWL point (0.000354045,0)
+V4: Removing PWL point (0.000360025,3.3)
+V4: Removing PWL point (0.000363575,0)
+V4: Removing PWL point (0.000370025,3.3)
+V4: Removing PWL point (0.000373115,0)
+V4: Removing PWL point (0.000380025,3.3)
+V4: Removing PWL point (0.000382665,0)
+V4: Removing PWL point (0.000390025,3.3)
+V4: Removing PWL point (0.000392245,0)
+V4: Removing PWL point (0.000400025,3.3)
+V4: Removing PWL point (0.000401855,0)
+V4: Removing PWL point (0.000410025,3.3)
+V4: Removing PWL point (0.000411485,0)
+V4: Removing PWL point (0.000420025,3.3)
+V4: Removing PWL point (0.000421155,0)
+V4: Removing PWL point (0.000430025,3.3)
+V4: Removing PWL point (0.000430865,0)
+V4: Removing PWL point (0.000440025,3.3)
+V4: Removing PWL point (0.000440615,0)
+V4: Removing PWL point (0.000450025,3.3)
+V4: Removing PWL point (0.000450405,0)
+V4: Removing PWL point (0.000460025,3.3)
+V4: Removing PWL point (0.000460245,0)
+V4: Removing PWL point (0.000470025,3.3)
+V4: Removing PWL point (0.000470125,0)
+V4: Removing PWL point (0.000480045,0)
+V4: Removing PWL point (0.000500045,0)
+V4: Removing PWL point (0.000510025,3.3)
+V4: Removing PWL point (0.000510125,0)
+V4: Removing PWL point (0.000520025,3.3)
+V4: Removing PWL point (0.000520245,0)
+V4: Removing PWL point (0.000530025,3.3)
+V4: Removing PWL point (0.000530405,0)
+V4: Removing PWL point (0.000540025,3.3)
+V4: Removing PWL point (0.000540615,0)
+V4: Removing PWL point (0.000550025,3.3)
+V4: Removing PWL point (0.000550865,0)
+V4: Removing PWL point (0.000560025,3.3)
+V4: Removing PWL point (0.000561155,0)
+V4: Removing PWL point (0.000570025,3.3)
+V4: Removing PWL point (0.000571485,0)
+V4: Removing PWL point (0.000580025,3.3)
+V4: Removing PWL point (0.000581855,0)
+V4: Removing PWL point (0.000590025,3.3)
+V4: Removing PWL point (0.000592245,0)
+V4: Removing PWL point (0.000600025,3.3)
+V4: Removing PWL point (0.000602665,0)
+V4: Removing PWL point (0.000610025,3.3)
+V4: Removing PWL point (0.000613115,0)
+V4: Removing PWL point (0.000620025,3.3)
+V4: Removing PWL point (0.000623575,0)
+V4: Removing PWL point (0.000630025,3.3)
+V4: Removing PWL point (0.000634045,0)
+V4: Removing PWL point (0.000640025,3.3)
+V4: Removing PWL point (0.000644535,0)
+V4: Removing PWL point (0.000650025,3.3)
+V4: Removing PWL point (0.000655025,0)
+V4: Removing PWL point (0.000660025,3.3)
+V4: Removing PWL point (0.000665515,0)
+V4: Removing PWL point (0.000670025,3.3)
+V4: Removing PWL point (0.000676005,0)
+V4: Removing PWL point (0.000680025,3.3)
+V4: Removing PWL point (0.000686475,0)
+V4: Removing PWL point (0.000690025,3.3)
+V4: Removing PWL point (0.000696935,0)
+V4: Removing PWL point (0.000700025,3.3)
+V4: Removing PWL point (0.000707385,0)
+V4: Removing PWL point (0.000710025,3.3)
+V4: Removing PWL point (0.000717805,0)
+V4: Removing PWL point (0.000720025,3.3)
+V4: Removing PWL point (0.000728195,0)
+V4: Removing PWL point (0.000730025,3.3)
+V4: Removing PWL point (0.000738565,0)
+V4: Removing PWL point (0.000740025,3.3)
+V4: Removing PWL point (0.000748895,0)
+V4: Removing PWL point (0.000750025,3.3)
+V4: Removing PWL point (0.000759185,0)
+V4: Removing PWL point (0.000760025,3.3)
+V4: Removing PWL point (0.000769435,0)
+V4: Removing PWL point (0.000770025,3.3)
+V4: Removing PWL point (0.000779645,0)
+V4: Removing PWL point (0.000780025,3.3)
+V4: Removing PWL point (0.000789805,0)
+V4: Removing PWL point (0.000790025,3.3)
+V4: Removing PWL point (0.000799925,0)
+V4: Removing PWL point (0.000800025,3.3)
+V4: Removing PWL point (0.000810025,3.3)
+V4: Removing PWL point (0.000830025,3.3)
+V4: Removing PWL point (0.000839925,0)
+V4: Removing PWL point (0.000840025,3.3)
+V4: Removing PWL point (0.000849805,0)
+V4: Removing PWL point (0.000850025,3.3)
+V4: Removing PWL point (0.000859645,0)
+V4: Removing PWL point (0.000860025,3.3)
+V4: Removing PWL point (0.000869435,0)
+V4: Removing PWL point (0.000870025,3.3)
+V4: Removing PWL point (0.000879185,0)
+V4: Removing PWL point (0.000880025,3.3)
+V4: Removing PWL point (0.000888895,0)
+V4: Removing PWL point (0.000890025,3.3)
+V4: Removing PWL point (0.000898565,0)
+V4: Removing PWL point (0.000900025,3.3)
+V4: Removing PWL point (0.000908195,0)
+V4: Removing PWL point (0.000910025,3.3)
+V4: Removing PWL point (0.000917805,0)
+V4: Removing PWL point (0.000920025,3.3)
+V4: Removing PWL point (0.000927385,0)
+V4: Removing PWL point (0.000930025,3.3)
+V4: Removing PWL point (0.000936935,0)
+V4: Removing PWL point (0.000940025,3.3)
+V4: Removing PWL point (0.000946475,0)
+V4: Removing PWL point (0.000950025,3.3)
+V4: Removing PWL point (0.000956005,0)
+V4: Removing PWL point (0.000960025,3.3)
+V4: Removing PWL point (0.000965515,0)
+V4: Removing PWL point (0.000970025,3.3)
+V4: Removing PWL point (0.000975025,0)
+V4: Removing PWL point (0.000980025,3.3)
+V4: Removing PWL point (0.000984535,0)
+V4: Removing PWL point (0.000990025,3.3)
+V4: Removing PWL point (0.000994045,0)
+V4: Removing PWL point (0.00100003,3.3)
+V4: Removing PWL point (0.00100358,0)
+V4: Removing PWL point (0.00101002,3.3)
+V4: Removing PWL point (0.00101312,0)
+V4: Removing PWL point (0.00102002,3.3)
+V4: Removing PWL point (0.00102267,0)
+V4: Removing PWL point (0.00103003,3.3)
+V4: Removing PWL point (0.00103225,0)
+V4: Removing PWL point (0.00104003,3.3)
+V4: Removing PWL point (0.00104186,0)
+V4: Removing PWL point (0.00105003,3.3)
+V4: Removing PWL point (0.00105149,0)
+V4: Removing PWL point (0.00106003,3.3)
+V4: Removing PWL point (0.00106116,0)
+V4: Removing PWL point (0.00107003,3.3)
+V4: Removing PWL point (0.00107087,0)
+V4: Removing PWL point (0.00108003,3.3)
+V4: Removing PWL point (0.00108062,0)
+V4: Removing PWL point (0.00109003,3.3)
+V4: Removing PWL point (0.00109041,0)
+V4: Removing PWL point (0.00110002,3.3)
+V4: Removing PWL point (0.00110024,0)
+V4: Removing PWL point (0.00111002,3.3)
+V4: Removing PWL point (0.00111013,0)
+V4: Removing PWL point (0.00112005,0)
+V4: Removing PWL point (0.00114004,0)
+V4: Removing PWL point (0.00115003,3.3)
+V4: Removing PWL point (0.00115013,0)
+V4: Removing PWL point (0.00116003,3.3)
+V4: Removing PWL point (0.00116025,0)
+V4: Removing PWL point (0.00117003,3.3)
+V4: Removing PWL point (0.00117041,0)
+V4: Removing PWL point (0.00118002,3.3)
+V4: Removing PWL point (0.00118062,0)
+V4: Removing PWL point (0.00119002,3.3)
+V4: Removing PWL point (0.00119086,0)
+V4: Removing PWL point (0.00120003,3.3)
+V4: Removing PWL point (0.00120116,0)
+V4: Removing PWL point (0.00121003,3.3)
+V4: Removing PWL point (0.00121149,0)
+V4: Removing PWL point (0.00122003,3.3)
+V4: Removing PWL point (0.00122186,0)
+V4: Removing PWL point (0.00123003,3.3)
+V4: Removing PWL point (0.00123225,0)
+V4: Removing PWL point (0.00124003,3.3)
+V4: Removing PWL point (0.00124267,0)
+V4: Removing PWL point (0.00125003,3.3)
+V4: Removing PWL point (0.00125312,0)
+V4: Removing PWL point (0.00126002,3.3)
+V4: Removing PWL point (0.00126358,0)
+V4: Removing PWL point (0.00127002,3.3)
+V4: Removing PWL point (0.00127404,0)
+V4: Removing PWL point (0.00128003,3.3)
+V4: Removing PWL point (0.00128454,0)
+V4: Removing PWL point (0.00129003,3.3)
+V4: Removing PWL point (0.00129503,0)
+V1: Removing PWL point (1.0025e-005,3.3)
+V1: Removing PWL point (1.5025e-005,0)
+V1: Removing PWL point (2.0025e-005,3.3)
+V1: Removing PWL point (2.5515e-005,0)
+V1: Removing PWL point (3.0025e-005,3.3)
+V1: Removing PWL point (3.6005e-005,0)
+V1: Removing PWL point (4.0025e-005,3.3)
+V1: Removing PWL point (4.6475e-005,0)
+V1: Removing PWL point (5.0025e-005,3.3)
+V1: Removing PWL point (5.6935e-005,0)
+V1: Removing PWL point (6.0025e-005,3.3)
+V1: Removing PWL point (6.7385e-005,0)
+V1: Removing PWL point (7.0025e-005,3.3)
+V1: Removing PWL point (7.7805e-005,0)
+V1: Removing PWL point (8.0025e-005,3.3)
+V1: Removing PWL point (8.8195e-005,0)
+V1: Removing PWL point (9.0025e-005,3.3)
+V1: Removing PWL point (9.8565e-005,0)
+V1: Removing PWL point (0.000100025,3.3)
+V1: Removing PWL point (0.000108895,0)
+V1: Removing PWL point (0.000110025,3.3)
+V1: Removing PWL point (0.000119185,0)
+V1: Removing PWL point (0.000120025,3.3)
+V1: Removing PWL point (0.000129435,0)
+V1: Removing PWL point (0.000130025,3.3)
+V1: Removing PWL point (0.000139645,0)
+V1: Removing PWL point (0.000140025,3.3)
+V1: Removing PWL point (0.000149805,0)
+V1: Removing PWL point (0.000150025,3.3)
+V1: Removing PWL point (0.000159925,0)
+V1: Removing PWL point (0.000160025,3.3)
+V1: Removing PWL point (0.000170025,3.3)
+V1: Removing PWL point (0.000190025,3.3)
+V1: Removing PWL point (0.000199925,0)
+V1: Removing PWL point (0.000200025,3.3)
+V1: Removing PWL point (0.000209805,0)
+V1: Removing PWL point (0.000210025,3.3)
+V1: Removing PWL point (0.000219645,0)
+V1: Removing PWL point (0.000220025,3.3)
+V1: Removing PWL point (0.000229435,0)
+V1: Removing PWL point (0.000230025,3.3)
+V1: Removing PWL point (0.000239185,0)
+V1: Removing PWL point (0.000240025,3.3)
+V1: Removing PWL point (0.000248895,0)
+V1: Removing PWL point (0.000250025,3.3)
+V1: Removing PWL point (0.000258565,0)
+V1: Removing PWL point (0.000260025,3.3)
+V1: Removing PWL point (0.000268195,0)
+V1: Removing PWL point (0.000270025,3.3)
+V1: Removing PWL point (0.000277805,0)
+V1: Removing PWL point (0.000280025,3.3)
+V1: Removing PWL point (0.000287385,0)
+V1: Removing PWL point (0.000290025,3.3)
+V1: Removing PWL point (0.000296935,0)
+V1: Removing PWL point (0.000300025,3.3)
+V1: Removing PWL point (0.000306475,0)
+V1: Removing PWL point (0.000310025,3.3)
+V1: Removing PWL point (0.000316005,0)
+V1: Removing PWL point (0.000320025,3.3)
+V1: Removing PWL point (0.000325515,0)
+V1: Removing PWL point (0.000330025,3.3)
+V1: Removing PWL point (0.000335025,0)
+V1: Removing PWL point (0.000340025,3.3)
+V1: Removing PWL point (0.000344535,0)
+V1: Removing PWL point (0.000350025,3.3)
+V1: Removing PWL point (0.000354045,0)
+V1: Removing PWL point (0.000360025,3.3)
+V1: Removing PWL point (0.000363575,0)
+V1: Removing PWL point (0.000370025,3.3)
+V1: Removing PWL point (0.000373115,0)
+V1: Removing PWL point (0.000380025,3.3)
+V1: Removing PWL point (0.000382665,0)
+V1: Removing PWL point (0.000390025,3.3)
+V1: Removing PWL point (0.000392245,0)
+V1: Removing PWL point (0.000400025,3.3)
+V1: Removing PWL point (0.000401855,0)
+V1: Removing PWL point (0.000410025,3.3)
+V1: Removing PWL point (0.000411485,0)
+V1: Removing PWL point (0.000420025,3.3)
+V1: Removing PWL point (0.000421155,0)
+V1: Removing PWL point (0.000430025,3.3)
+V1: Removing PWL point (0.000430865,0)
+V1: Removing PWL point (0.000440025,3.3)
+V1: Removing PWL point (0.000440615,0)
+V1: Removing PWL point (0.000450025,3.3)
+V1: Removing PWL point (0.000450405,0)
+V1: Removing PWL point (0.000460025,3.3)
+V1: Removing PWL point (0.000460245,0)
+V1: Removing PWL point (0.000470025,3.3)
+V1: Removing PWL point (0.000470125,0)
+V1: Removing PWL point (0.000480045,0)
+V1: Removing PWL point (0.000500045,0)
+V1: Removing PWL point (0.000510025,3.3)
+V1: Removing PWL point (0.000510125,0)
+V1: Removing PWL point (0.000520025,3.3)
+V1: Removing PWL point (0.000520245,0)
+V1: Removing PWL point (0.000530025,3.3)
+V1: Removing PWL point (0.000530405,0)
+V1: Removing PWL point (0.000540025,3.3)
+V1: Removing PWL point (0.000540615,0)
+V1: Removing PWL point (0.000550025,3.3)
+V1: Removing PWL point (0.000550865,0)
+V1: Removing PWL point (0.000560025,3.3)
+V1: Removing PWL point (0.000561155,0)
+V1: Removing PWL point (0.000570025,3.3)
+V1: Removing PWL point (0.000571485,0)
+V1: Removing PWL point (0.000580025,3.3)
+V1: Removing PWL point (0.000581855,0)
+V1: Removing PWL point (0.000590025,3.3)
+V1: Removing PWL point (0.000592245,0)
+V1: Removing PWL point (0.000600025,3.3)
+V1: Removing PWL point (0.000602665,0)
+V1: Removing PWL point (0.000610025,3.3)
+V1: Removing PWL point (0.000613115,0)
+V1: Removing PWL point (0.000620025,3.3)
+V1: Removing PWL point (0.000623575,0)
+V1: Removing PWL point (0.000630025,3.3)
+V1: Removing PWL point (0.000634045,0)
+V1: Removing PWL point (0.000640025,3.3)
+V1: Removing PWL point (0.000644535,0)
+V1: Removing PWL point (0.000650025,3.3)
+V1: Removing PWL point (0.000655025,0)
+V1: Removing PWL point (0.000660025,3.3)
+V1: Removing PWL point (0.000665515,0)
+V1: Removing PWL point (0.000670025,3.3)
+V1: Removing PWL point (0.000676005,0)
+V1: Removing PWL point (0.000680025,3.3)
+V1: Removing PWL point (0.000686475,0)
+V1: Removing PWL point (0.000690025,3.3)
+V1: Removing PWL point (0.000696935,0)
+V1: Removing PWL point (0.000700025,3.3)
+V1: Removing PWL point (0.000707385,0)
+V1: Removing PWL point (0.000710025,3.3)
+V1: Removing PWL point (0.000717805,0)
+V1: Removing PWL point (0.000720025,3.3)
+V1: Removing PWL point (0.000728195,0)
+V1: Removing PWL point (0.000730025,3.3)
+V1: Removing PWL point (0.000738565,0)
+V1: Removing PWL point (0.000740025,3.3)
+V1: Removing PWL point (0.000748895,0)
+V1: Removing PWL point (0.000750025,3.3)
+V1: Removing PWL point (0.000759185,0)
+V1: Removing PWL point (0.000760025,3.3)
+V1: Removing PWL point (0.000769435,0)
+V1: Removing PWL point (0.000770025,3.3)
+V1: Removing PWL point (0.000779645,0)
+V1: Removing PWL point (0.000780025,3.3)
+V1: Removing PWL point (0.000789805,0)
+V1: Removing PWL point (0.000790025,3.3)
+V1: Removing PWL point (0.000799925,0)
+V1: Removing PWL point (0.000800025,3.3)
+V1: Removing PWL point (0.000810025,3.3)
+V1: Removing PWL point (0.000830025,3.3)
+V1: Removing PWL point (0.000839925,0)
+V1: Removing PWL point (0.000840025,3.3)
+V1: Removing PWL point (0.000849805,0)
+V1: Removing PWL point (0.000850025,3.3)
+V1: Removing PWL point (0.000859645,0)
+V1: Removing PWL point (0.000860025,3.3)
+V1: Removing PWL point (0.000869435,0)
+V1: Removing PWL point (0.000870025,3.3)
+V1: Removing PWL point (0.000879185,0)
+V1: Removing PWL point (0.000880025,3.3)
+V1: Removing PWL point (0.000888895,0)
+V1: Removing PWL point (0.000890025,3.3)
+V1: Removing PWL point (0.000898565,0)
+V1: Removing PWL point (0.000900025,3.3)
+V1: Removing PWL point (0.000908195,0)
+V1: Removing PWL point (0.000910025,3.3)
+V1: Removing PWL point (0.000917805,0)
+V1: Removing PWL point (0.000920025,3.3)
+V1: Removing PWL point (0.000927385,0)
+V1: Removing PWL point (0.000930025,3.3)
+V1: Removing PWL point (0.000936935,0)
+V1: Removing PWL point (0.000940025,3.3)
+V1: Removing PWL point (0.000946475,0)
+V1: Removing PWL point (0.000950025,3.3)
+V1: Removing PWL point (0.000956005,0)
+V1: Removing PWL point (0.000960025,3.3)
+V1: Removing PWL point (0.000965515,0)
+V1: Removing PWL point (0.000970025,3.3)
+V1: Removing PWL point (0.000975025,0)
+V1: Removing PWL point (0.000980025,3.3)
+V1: Removing PWL point (0.000984535,0)
+V1: Removing PWL point (0.000990025,3.3)
+V1: Removing PWL point (0.000994045,0)
+V1: Removing PWL point (0.00100003,3.3)
+V1: Removing PWL point (0.00100358,0)
+V1: Removing PWL point (0.00101002,3.3)
+V1: Removing PWL point (0.00101312,0)
+V1: Removing PWL point (0.00102002,3.3)
+V1: Removing PWL point (0.00102267,0)
+V1: Removing PWL point (0.00103003,3.3)
+V1: Removing PWL point (0.00103225,0)
+V1: Removing PWL point (0.00104003,3.3)
+V1: Removing PWL point (0.00104186,0)
+V1: Removing PWL point (0.00105003,3.3)
+V1: Removing PWL point (0.00105149,0)
+V1: Removing PWL point (0.00106003,3.3)
+V1: Removing PWL point (0.00106116,0)
+V1: Removing PWL point (0.00107003,3.3)
+V1: Removing PWL point (0.00107087,0)
+V1: Removing PWL point (0.00108003,3.3)
+V1: Removing PWL point (0.00108062,0)
+V1: Removing PWL point (0.00109003,3.3)
+V1: Removing PWL point (0.00109041,0)
+V1: Removing PWL point (0.00110002,3.3)
+V1: Removing PWL point (0.00110024,0)
+V1: Removing PWL point (0.00111002,3.3)
+V1: Removing PWL point (0.00111013,0)
+V1: Removing PWL point (0.00112005,0)
+V1: Removing PWL point (0.00114004,0)
+V1: Removing PWL point (0.00115003,3.3)
+V1: Removing PWL point (0.00115013,0)
+V1: Removing PWL point (0.00116003,3.3)
+V1: Removing PWL point (0.00116025,0)
+V1: Removing PWL point (0.00117003,3.3)
+V1: Removing PWL point (0.00117041,0)
+V1: Removing PWL point (0.00118002,3.3)
+V1: Removing PWL point (0.00118062,0)
+V1: Removing PWL point (0.00119002,3.3)
+V1: Removing PWL point (0.00119086,0)
+V1: Removing PWL point (0.00120003,3.3)
+V1: Removing PWL point (0.00120116,0)
+V1: Removing PWL point (0.00121003,3.3)
+V1: Removing PWL point (0.00121149,0)
+V1: Removing PWL point (0.00122003,3.3)
+V1: Removing PWL point (0.00122186,0)
+V1: Removing PWL point (0.00123003,3.3)
+V1: Removing PWL point (0.00123225,0)
+V1: Removing PWL point (0.00124003,3.3)
+V1: Removing PWL point (0.00124267,0)
+V1: Removing PWL point (0.00125003,3.3)
+V1: Removing PWL point (0.00125312,0)
+V1: Removing PWL point (0.00126002,3.3)
+V1: Removing PWL point (0.00126358,0)
+V1: Removing PWL point (0.00127002,3.3)
+V1: Removing PWL point (0.00127404,0)
+V1: Removing PWL point (0.00128003,3.3)
+V1: Removing PWL point (0.00128454,0)
+V1: Removing PWL point (0.00129003,3.3)
+V1: Removing PWL point (0.00129503,0)
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+vernier = 0.0625
+Gmin = 1.08884
+vernier = 0.03125
+vernier = 0.015625
+Gmin = 1.03122
+vernier = 0.0078125
+vernier = 0.00390625
+Gmin = 1.01823
+vernier = 0.00520833
+vernier = 0.00260417
+Gmin = 1.01162
+vernier = 0.00347222
+vernier = 0.00173611
+vernier = 0.00231481
+vernier = 0.00115741
+Gmin = 1.00877
+vernier = 0.00154321
+vernier = 0.000771604
+Gmin = 1.00673
+vernier = 0.00102881
+vernier = 0.000514403
+vernier = 0.00068587
+Gmin = 1.00553
+vernier = 0.000514403
+vernier = 0.00068587
+vernier = 0.000514402
+Gmin = 1.00475
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+Source Step = 33.3333%
+Source Step = 63.6364%
+Source Step = 69.7058%
+Source Step = 69.7354%
+Source Step = 69.765%
+Source Step = 69.7946%
+Source Step = 69.8242%
+Source Step = 69.8538%
+vernier = 0.00146484
+Source Step = 69.8952%
+Source Step = 69.9396%
+Source Step = 69.984%
+Source Step = 70.0284%
+Source Step = 70.0728%
+vernier = 0.00219727
+Source Step = 70.1327%
+Source Step = 70.1993%
+Source Step = 70.2659%
+Source Step = 70.3325%
+Source Step = 70.3991%
+vernier = 0.0032959
+Source Step = 70.4856%
+Source Step = 70.5855%
+Source Step = 70.6854%
+Source Step = 70.7852%
+Source Step = 70.8851%
+vernier = 0.00494385
+Source Step = 71.01%
+Source Step = 71.1598%
+Source Step = 71.3096%
+Source Step = 71.4594%
+Source Step = 71.6092%
+vernier = 0.00741577
+Source Step = 71.789%
+Source Step = 72.0137%
+Source Step = 72.2384%
+Source Step = 72.4632%
+Source Step = 72.6879%
+vernier = 0.0111237
+Source Step = 72.9463%
+Source Step = 73.2834%
+Source Step = 73.6205%
+Source Step = 73.9575%
+Source Step = 74.2946%
+vernier = 0.0166855
+Source Step = 74.6654%
+Source Step = 75.171%
+Source Step = 75.6767%
+Source Step = 76.1823%
+Source Step = 76.6879%
+vernier = 0.0250282
+Source Step = 77.2188%
+Source Step = 77.9772%
+Source Step = 78.7357%
+Source Step = 79.4941%
+Source Step = 80.2525%
+Source Step = 81.011%
+vernier = 0.0375423
+Source Step = 82.1486%
+Source Step = 83.2863%
+Source Step = 84.4239%
+Source Step = 85.5615%
+Source Step = 86.6992%
+vernier = 0.0563135
+Source Step = 88.3488%
+Source Step = 90.0552%
+Source Step = 91.7617%
+Source Step = 93.4682%
+Source Step = 95.1747%
+vernier = 0.0844703
+Source Step = 97.5637%
+Source Step = 100%
+Source stepping succeeded in finding the operating point.
+
+
+Date: Sat Jul 04 12:13:18 2020
+Total elapsed time: 18.830 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 312440
+traniter = 303416
+tranpoints = 151709
+accept = 151709
+rejected = 0
+matrix size = 27
+fillins = 20
+solver = Normal
+Thread vector: 42.5/20.6[2] 3.9/3.3[2] 4.2/59.5[1] 0.8/5.9[1]  2592/500
+Matrix Compiler1: 1.62 KB object code size  1.1/0.6/[0.2]
+Matrix Compiler2: 2.54 KB object code size  0.7/1.2/[0.5]
+>>>>>>> 727829d1d00964e0ec7982295cba9fc9b216d12a
 
