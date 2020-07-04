@@ -1,12 +1,19 @@
 
+//////////////////////////////////////////////////////
+// a module to implement a serial data 12 bit dac   //
+//                                                  //
+// Giulia e Flavio                                  //
+// spring 2020                                      //
+////////////////////////////////////////////////////// 
+
 `timescale 1ns / 100ps
 
-module SDAC (
+module SI_DAC (
 
-   input wire SI,
-   input wire clk,
-   input wire soc,
-   input wire en_SI,      // beginning of the digital to analog conversion
+   input  wire SI,
+   input  wire clk,
+   input  wire soc,         // start of conversion 
+   input  wire SI_en,      // beginning of the digital to analog conversion
    output real A_out
 
    )  ;
@@ -27,9 +34,9 @@ module SDAC (
 	  .soc             (soc),
 	  .PDATA           (pdata),
 	  .SO              (SO),
-	  .en              (en_SI)
+	  .SI_en           (SI_en)
      
-   )   ;
+   ) ;
    
    
    ////////////////////
@@ -41,19 +48,19 @@ module SDAC (
    DAC DAC_inst (
    
       .clk         (clk),
-	  .I_data      (I_data),
+	  .I_data      (pdata),
 	  .digit       (digit),
 	  .en          (soc),          //it shoud be one clock period long
 	  .A_out       (A_out)
 	  
-	  ) ;
+   ) ;
    
    
    
    
    
    
-endmodule : SDAC
+endmodule : SI_DAC
 
 
 

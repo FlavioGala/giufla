@@ -5,15 +5,28 @@
 
 `timescale 1ns / 100ps
 
-module tb_WidthSine ;
+module tb_ROM_mapping ;
 
-      /////////////////////////////////
+
+
+   /////////////////////////////////
    //   100 MHz clock generator   //
    /////////////////////////////////
 
    wire clk100 ;
 
    ClockGen ClockGen_inst (.clk(clk100)) ;
+   
+   
+   
+   // TICK COUNTER INST
+   
+   wire tick ;
+   wire tick_enable ;   
+  
+   TickCounter #(.MAX(1000)) tick_inst (.clk(clk), .en(tick_enable), .tick(tick)) ;
+   
+   
    
    ///////////////////
    //     DUT       //
@@ -22,16 +35,14 @@ module tb_WidthSine ;
    wire [31:0] width ;
    wire tick_enable = 1'b1 ;
    wire SO ;
+   wire load = ROM_mapping.load ;
    
-   wire [4:0] ShiftCounter = Width.ShiftCounter ;
-   wire load = Width.load ;
-   wire [7:0] pdata = Width.pdata ;
    wire SI_en ;
    wire soc ;
-   wire tick = Width.tick ;
+      
+   ROM_mapping ROM_mapping_inst (.clk(clk100), .widthSine(width), .tick_enable(tick_enable), .SO(SO), .SI_en(SI_en), .soc(soc), .tick(tick) ) ;
    
    
-   WidthSine Width (.clk(clk100), .widthSine(width), .tick_enable(tick_enable), .SO(SO), .SI_en(SI_en), .soc(soc) ) ;
    
    
    ///////////////////////
