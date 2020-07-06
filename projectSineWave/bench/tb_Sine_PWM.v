@@ -24,11 +24,11 @@ module tb_Sine_PWM ;
    //     DUT       //
    ///////////////////
    
-   wire pippo ;
+   wire Sine ;
    
    reg PWM_enable = 1'b0 ;
    
-   Sine_PWM sine_PWM_inst (.clk_100(clk100), .sine(pippo), .en(PWM_enable) ) ;
+   Sine_PWM sine_PWM_inst (.clk_100(clk100), .sine(Sine), .en(PWM_enable) ) ;
    
    
    
@@ -42,19 +42,19 @@ module tb_Sine_PWM ;
 
       #70000 PWM_enable = 1'b1 ; 
       t1 = $time ; 
-      $display("\n\npippo is = %.2f at time %.2f\n\n", pippo, t1) ;
+      $display("\n\nSine is = %.2f at time %.2f\n\n", Sine, t1) ;
 
       #30000 PWM_enable = 1'b0 ;
       t2 = $time ; 
-      $display("\n\npippo is = %.2f at time %.2f\n\n", pippo, t2) ;	   
+      $display("\n\nSine is = %.2f at time %.2f\n\n", Sine, t2) ;	   
 
       #30000 PWM_enable = 1'b1 ;
       t3 = $time ; 
-      $display("\n\npippo is = %.2f at time %.2f\n\n", pippo, t3) ;
+      $display("\n\nSine is = %.2f at time %.2f\n\n", Sine, t3) ;
 
       #30000 PWM_enable = 1'b0 ;
       t4 = $time ; 
-      $display("\n\npippo is = %.2f at time %.2f\n\n", pippo, t4) ;
+      $display("\n\nSine is = %.2f at time %.2f\n\n", Sine, t4) ;
 
       #660000 $finish ;
 
@@ -73,7 +73,7 @@ module tb_Sine_PWM ;
 
    always @(posedge clk100) begin    // register pseudo-random bit values to ASCII file whenever a "tick" is asserted inside the LFSR
       
-	  $fdisplay(f,"%b", pippo, $time) ;
+	  $fdisplay(f,"%b", Sine, $time) ;
    
    end */
 
