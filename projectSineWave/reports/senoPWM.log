@@ -1,5 +1,8 @@
-Circuit: * C:\Users\Garripoli\Desktop\giufla\projectSineWave\reports\senoPWM.asc
+Circuit: * C:\Users\giuli\Desktop\giufla\projectSineWave\reports\senoPWM.asc
 
+<<<<<<< HEAD
+Fatal Error: Could not open file "c:\users\garripoli\desktop\giufla\projectsinewave\python\datiltspice_fin.txt" in PWL
+=======
 V4: Removing PWL point (1.0025e-005,3.3)
 V4: Removing PWL point (1.5025e-005,0)
 V4: Removing PWL point (2.0025e-005,3.3)
@@ -615,4 +618,5 @@ solver = Normal
 Thread vector: 42.5/20.6[2] 3.9/3.3[2] 4.2/59.5[1] 0.8/5.9[1]  2592/500
 Matrix Compiler1: 1.62 KB object code size  1.1/0.6/[0.2]
 Matrix Compiler2: 2.54 KB object code size  0.7/1.2/[0.5]
+>>>>>>> 727829d1d00964e0ec7982295cba9fc9b216d12a
 

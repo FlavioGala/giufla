@@ -1,4 +1,5 @@
 
+
 //--------------------------------------------
 //this is the final module of a sine wave generator
 //
@@ -77,7 +78,6 @@ module Sine_PWM (
 
 
 
-endmodule
 
-cacca
+endmodule
 
