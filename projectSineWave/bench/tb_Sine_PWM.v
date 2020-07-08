@@ -24,7 +24,7 @@ module tb_Sine_PWM ;
    //     DUT       //
    ///////////////////
    
-   wire Sine ;
+   wire Sine ;  
    
    reg PWM_enable = 1'b0 ;
    
