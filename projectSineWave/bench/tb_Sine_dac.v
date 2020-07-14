@@ -24,7 +24,6 @@ module tb_Sine_dac ;
    reg dac_enable = 1'b1 ;
    
    real A_out ;
-   real A_out_test = Sine_dac_inst.A_out_test ;
    wire SDI = Sine_dac_inst.SI ;
 
    Sine_dac Sine_dac_inst (
